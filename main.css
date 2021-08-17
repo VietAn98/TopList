@@ -1,0 +1,254 @@
+@font-face {
+  font-family: OpenSans;
+  src: url("../Assets/fonts/OpenSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: OpenSans-SemiBold;
+  src: url("../Assets/fonts/OpenSans-SemiBold.ttf");
+}
+
+:root {
+  --primary-0: #55ae9b;
+  --primary-1: #6cc0ae;
+  --primary-2: #9dddcd;
+  --primary-3: #b8e7d7;
+  --primary-4: #dcf3eb;
+  --black-1: #0d0c22;
+  --black-2: #3d3d4e;
+  --black-3: #6e6d7a;
+  --black-4: #a9aab8;
+  --black-5: #e2e2e2;
+  --black-6: #636363;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: sans-serif, OpenSans-SemiBold;
+}
+
+* {
+  font-family: sans-serif, OpenSans;
+}
+body {
+  /* width: 100vw; */
+  margin: 0px;
+  /* overflow-x: hidden !important; */
+  background-color: #e9f4f0;
+  /* min-width: 375px; */
+}
+
+header {
+  /* margin: auto; */
+  display: block;
+  width: 100vw;
+  background-color: #ffffff;
+}
+
+header .navbar {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  /* width: 100%; */
+  justify-content: space-between;
+  padding: 0px 80px;
+  align-items: center;
+  height: 72px;
+}
+
+.navbar .first-half,
+.navbar .last-half {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--primary-1);
+  margin: 0px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .categories {
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+  margin-left: 30px;
+  margin-right: 36px;
+}
+.navbar .categories .fas.fa-bars {
+  width: 32px;
+  color: var(--primary-1);
+  cursor: pointer;
+}
+
+.navbar .categories p {
+  margin-left: -10px;
+  color: var(--black-6);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.input-icon {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+.input-icon i.icon {
+  position: absolute;
+  padding: 10px;
+  color: var(--black-4);
+  width: 14px;
+}
+
+.input-field {
+  width: 357px;
+  padding: 10px 10px 10px 30px;
+  border: none;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+}
+
+.input-field::placeholder {
+  color: var(--black-4);
+  font-size: 16px;
+  padding: 10px 10px 10px 10px;
+}
+
+.language {
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+}
+
+.language .i-globe {
+  color: var(--black-3);
+}
+
+.language .language-dropdown {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.language .language-dropdown p {
+  font-size: 16px;
+}
+
+.language .language-dropdown i {
+  margin-left: 10px;
+  color: var(--black-3);
+}
+
+.primary-btn {
+  background-color: var(--primary-1);
+  color: white;
+  border-radius: 10px;
+  padding: 9px 18px;
+  border: none;
+  box-shadow: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  height: 40px;
+
+  margin-right: 16px;
+}
+
+.outline-btn {
+  font-weight: 600;
+  background-color: white;
+  color: var(--primary-1);
+  border-radius: 10px;
+  padding: 9px 18px;
+  border: 1px solid var(--primary-1);
+  box-shadow: none;
+  font-size: 16px;
+  cursor: pointer;
+  height: 40px;
+}
+
+.title2 {
+  font-family: OpenSans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  margin: 0px;
+  color: var(--black-1);
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.figures {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+
+  color: var(--black-6);
+}
+
+.fb-btn {
+  background-color: #408bc1;
+  color: white;
+  height: 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+.fb-btn i {
+  margin-right: 5px;
+}
+
+@media only screen and (max-width: 1200px) {
+  header .navbar {
+    padding: 0px 20px;
+  }
+}
+
+@media only screen and (max-width: 1088px) {
+  .navbar .categories p {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .input-field,
+  .input-icon,
+  i.icon {
+    display: none !important;
+  }
+  .banner {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    text-align: center;
+
+    flex-direction: column;
+  }
+  .banner h2 {
+    margin-bottom: 20px !important;
+  }
+}
+@media only screen and (max-width: 590px) {
+  .last-half {
+    display: none !important;
+  }
+  .first-half {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .categories i.fas.fa-bars {
+    position: absolute;
+    right: 0;
+    width: 50px !important;
+  }
+}
