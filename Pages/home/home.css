@@ -4,47 +4,107 @@
   justify-content: center;
 
   padding: 33px;
+  background-color: #e9f4f0;
 }
 
 .homepage-container {
-  background-color: white;
   padding: 40px 80px;
-  margin: auto;
-  /* display: flex; */
-  /* width: 100%; */
+  height: 100%;
 }
 
-.news {
-}
-.tags {
-}
-.topAuthors {
-  /* padding-left: 20px; */
-}
-.othernews {
-  margin-top: 50px;
+.homepage-content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 48.5% 50%;
+  grid-template-rows: 100%;
+  gap: 0px 30px;
+  grid-template-areas: "card-news tags-authors-otherNews";
 }
 
-.grid-container {
-  display: flex;
-  flex-direction: row;
-  /* display: grid;
+.card-news {
+  grid-area: card-news;
+}
+.tags-authors-otherNews {
+  grid-area: tags-authors-otherNews;
+  display: grid;
+  grid-template-rows: 40% 50%;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 100%;
+  gap: 0px 30px;
   grid-template-areas:
-    "news news tags tags topAuthors topAuthors"
-    "news news othernews othernews othernews othernews";
-  grid-gap: 10px; */
-  /* background-color: #2196f3; */
-  /* padding: 10px; */
+    "tags authors"
+    "other-news";
 }
 
-.grid-container > div {
-  /* background-color: rgba(255, 255, 255, 0.8); */
-  /* text-align: center; */
-  /* padding: 20px 0; */
-  /* font-size: 30px; */
+.tags-authors {
+  grid-area: 1 / 1 / 2 / 2;
+
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+  gap: 0px 0px;
+  grid-template-areas: "tags authors";
 }
 
-.news .news-item {
+.tags {
+  grid-area: tags;
+}
+.authors {
+  grid-area: authors;
+
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  grid-template-rows: 30px 100%;
+  gap: 18px 0px;
+
+  padding-left: 15px;
+}
+
+.authors .title {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.top-authors-container {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 32px 32px 32px 32px 32px 32px;
+  gap: 18px 0px;
+  grid-template-areas:
+    "authors-name figures"
+    "authors-name figures"
+    "authors-name figures"
+    "authors-name figures"
+    "authors-name figures"
+    "authors-name figures"
+    "authors-name figures";
+  grid-area: 2 / 1 / 3 / 2;
+}
+.authors-name {
+  grid-area: authors-name;
+}
+.figures {
+  grid-area: figures;
+  text-align: right;
+}
+.p-black2 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+
+  color: #000000;
+}
+
+.other-news {
+  grid-area: 2 / 1 / 3 / 2;
+
+  padding-left: 15px;
+}
+
+.news-item {
   display: flex;
   flex-direction: row;
   margin-bottom: 40px;
@@ -57,6 +117,7 @@
 
 .news-information {
   margin-left: 20px;
+  margin-right: 20px;
 }
 .avatar-datetime,
 .views,
@@ -71,7 +132,7 @@
 .news-information .news-description {
   font-size: 14px;
   text-align: justify;
-  width: 418px;
+  /* max-width: 450px; */
   color: var(--black-1);
 }
 
@@ -110,6 +171,193 @@
   background: #ebebeb;
   border-radius: 10px;
   padding: 6px 12px;
+  color: #636363;
+  font-size: 14px;
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.topAuthors .authors {
+  margin-top: 15px;
+  margin-bottom: 18px;
+}
+.author-name-container.flex-row {
+  align-items: center;
+  margin-top: 15px;
+}
+.author-name-container .avatar-author {
+  margin-right: 12px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination .item {
+  text-align: center;
+  padding: 10px 0px;
+  width: 48px;
+  margin: 0px 5px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: 1px solid #a9aab8;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.pagination .item-select {
+  background-color: #6cc0ae;
+  border: 1px solid #6cc0ae;
+  color: white;
+}
+
+.norms {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.buttons {
+  display: flex;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.buttons .first-btn.first {
+  height: 38px !important;
+  background-color: #24cb99;
+  border-radius: 10px;
+
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  /* identical to box height, or 150% */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: white;
+
+  padding: 0px 31px;
+
+  margin-right: 12px;
+}
+.buttons .second-btn.second {
+  height: 38px !important;
+  background: #008cf1;
+  border-radius: 10px;
+
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  /* identical to box height, or 150% */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: white;
+
+  padding: 0px 31px;
+  margin-right: 12px;
+}
+.buttons .third-btn.third {
+  height: 38px !important;
+  background: #49b3ff;
+  border-radius: 10px;
+
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  /* identical to box height, or 150% */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: white;
+
+  padding: 0px 31px;
+  margin-right: 12px;
+}
+
+.footer {
+  display: flex;
+  margin-top: 60px;
+  padding: 47px 80px;
+  background-color: #ebebeb;
+}
+
+.ft-logo {
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--primary-1);
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 13px;
+}
+
+.ft-slogan {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  width: 298px;
+}
+
+.ft-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  flex-basis: 25%;
+  color: #31313e;
+}
+
+.wrap-icon {
+  margin-top: 43px;
+}
+
+.ft-icon {
+  margin-right: 20px;
+}
+
+.ft-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 16px;
+}
+
+.ft-list-ul {
+  line-height: 34px;
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+.ft-list-ul li {
+  cursor: pointer;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ft-content {
+    margin-top: 5px;
+  }
+  .ft-title {
+    margin-bottom: 12px;
+  }
 }
 
 @media only screen and (max-width: 1120px) {
