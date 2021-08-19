@@ -229,6 +229,8 @@ header .nav-container {
   cursor: pointer;
   height: 40px;
   margin-right: 16px;
+
+  white-space: nowrap;
 }
 
 .outline-btn {
@@ -242,6 +244,8 @@ header .nav-container {
   font-size: 16px;
   cursor: pointer;
   height: 40px;
+
+  white-space: nowrap;
 }
 
 .title1 {
@@ -344,6 +348,7 @@ header .nav-container {
   border-radius: 5px;
 
   margin-left: 20px;
+  white-space: nowrap;
 }
 
 .fb-btn i {
@@ -353,6 +358,292 @@ header .nav-container {
 .divider {
   border: 2px solid #6cc0ae;
   border-radius: 5px;
-  margin-top: 20px;
+  margin-top: 15px;
   margin-bottom: 20px;
+}
+.category-group {
+  grid-area: category-group;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #3d3d4e;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: var(--primary-0);
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 1310px) {
+  .search-bar {
+    display: none;
+  }
+
+  .homepage-content {
+    grid-template-columns: 55% 45% !important;
+    gap: 0px 0px !important;
+  }
+  .homepage-content .card-news {
+    margin-right: 50px;
+  }
+
+  .tags-authors-otherNews {
+    display: grid !important;
+    grid-template-columns: 100% !important;
+    grid-template-rows: 1fr !important;
+    grid-auto-columns: 1fr !important;
+    grid-auto-rows: 1fr !important;
+    gap: 0px 0px !important;
+    grid-auto-flow: row !important;
+    grid-template-areas: "tags-authors" !important;
+  }
+
+  .tags-authors {
+    display: grid !important;
+    grid-template-rows: max-content !important;
+    grid-template-columns: 100% !important;
+    grid-auto-columns: auto !important;
+    gap: 30px 0px !important;
+    grid-auto-flow: row !important;
+    grid-area: tags-authors !important;
+  }
+
+  .tags {
+    grid-area: 1 / 1 / 2 / 2 !important;
+  }
+
+  .authors {
+    grid-area: 2 / 1 / 3 / 2 !important;
+    padding-left: 0px !important;
+
+    margin-bottom: 30px;
+  }
+
+  .other-news {
+    padding-left: 0px !important;
+  }
+}
+@media only screen and (max-width: 1240px) {
+  header .navbar,
+  .homepage-container,
+  .footer {
+    padding: 20px 40px !important;
+  }
+}
+@media only screen and (max-width: 1160px) {
+  header .navbar,
+  .homepage-container,
+  .footer {
+    padding: 20px 20px !important;
+  }
+}
+
+@media only screen and (max-width: 1117px) {
+  .homepage-container {
+    display: grid !important;
+    grid-template-columns: 100% !important;
+    grid-template-rows: 1fr !important;
+    grid-auto-columns: 1fr !important;
+    grid-auto-rows: 1fr !important;
+    gap: 0px 0px !important;
+    grid-auto-flow: row !important;
+    grid-template-areas: "homepage-content" !important;
+  }
+
+  .homepage-content {
+    display: grid !important;
+    grid-template-rows: auto !important;
+    grid-auto-columns: 1fr !important;
+    gap: 30px 0px !important;
+    grid-auto-flow: row !important;
+    grid-area: homepage-content !important;
+
+    justify-content: center !important;
+
+    border-bottom: 1px solid #d8d8d8;
+  }
+
+  .card-news {
+    grid-area: 1 / 1 / 2 / 2 !important;
+  }
+
+  .tags-authors-otherNews {
+    grid-area: 2 / 1 / 3 / 2 !important;
+  }
+
+  .other-news {
+    border-top: 1px solid #d8d8d8;
+    padding-top: 20px;
+  }
+
+  .tags {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #d8d8d8;
+    border-top: 1px solid #d8d8d8;
+    padding-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .language {
+    display: none;
+  }
+
+  .banner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .banner .primary-btn {
+    margin-top: 12px;
+  }
+
+  .norms {
+    margin-top: 30px !important;
+  }
+
+  .pagination .item {
+    width: 36px !important;
+    height: 36px;
+    font-size: 16px !important;
+  }
+
+  .first-btn.first {
+    /* display: inline !important; */
+    justify-content: center;
+    width: 149px !important;
+    height: 28px !important;
+    font-size: 14px !important;
+    padding: 5px 5px !important;
+  }
+  .second-btn.second,
+  .third-btn.third {
+    height: 28px !important;
+    font-size: 14px !important;
+  }
+
+  .norms p {
+    font-size: 14px !important;
+  }
+
+  .ft-slogan {
+    width: 100% !important;
+    text-align: justify;
+    font-size: 14px;
+  }
+  .wrap-icon {
+    margin-top: 22px !important;
+  }
+}
+@media only screen and (max-width: 760px) {
+  header .navbar {
+    padding: 0px 12px;
+  }
+
+  .banner {
+    padding: 15px 12px !important;
+  }
+
+  .second-section .primary-btn,
+  .second-section .outline-btn {
+    display: none;
+  }
+  .nav-container {
+    display: grid !important;
+    grid-template-columns: 100% !important;
+    grid-template-rows: 48px !important;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0px 0px !important;
+    grid-auto-flow: row !important;
+    grid-template-areas: "first-section" !important;
+    align-items: center !important;
+  }
+
+  .first-section {
+    display: grid;
+    grid-template-columns: 20% 1fr 20%;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "logo . category-group";
+    grid-area: first-section;
+  }
+
+  .category-group {
+    justify-content: flex-end;
+  }
+
+  .category-group p {
+    display: none;
+  }
+
+  .tags-authors-otherNews {
+    grid-template-columns: auto !important;
+    grid-auto-rows: auto !important;
+  }
+
+  .authors {
+    margin-right: 20px;
+  }
+  .news-description {
+    display: none;
+  }
+  .news-item img.thumnail {
+    width: 106px;
+    height: 68px;
+  }
+  .title2 {
+    font-size: 15px;
+  }
+  .current-user {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .small-information.flex-row {
+    flex-direction: column;
+    justify-content: left;
+  }
+  .fb-btn {
+    margin-left: 0px;
+    float: left;
+  }
+  .btn-container {
+    width: 100%;
+  }
 }

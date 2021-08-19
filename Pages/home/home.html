@@ -15,14 +15,25 @@
   </head>
 
   <body>
+    <script src="home.js"></script>
+
     <header>
       <nav class="navbar">
+        <div id="sideNavigate" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            >&times;</a
+          >
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Clients</a>
+          <a href="#">Contact</a>
+        </div>
         <div class="nav-container">
           <div class="first-section">
             <h1 class="logo">LOGO</h1>
             <div class="category-group">
               <div class="dropdown">
-                <i class="fas fa-bars"></i>
+                <i class="fas fa-bars" id="menu-icon" onclick="openNav()"></i>
                 <div class="dropdown-content">
                   <span class="categories-tags">Mới nhất</span>
                   <div class="divider"></div>
@@ -65,8 +76,31 @@
               </div>
             </div>
 
-            <button class="primary-btn">Đăng nhập</button>
-            <button class="outline-btn">Đăng ký</button>
+            <button onclick="login()" id="btnlogin" class="primary-btn">
+              Đăng nhập
+            </button>
+            <button id="btnregister" class="outline-btn">Đăng ký</button>
+            <div class="current-user" id="current-user">
+              <span class="wrap-avatar">
+                <img
+                  class="user-avatar"
+                  src="../../Assets/images/avar-user.jpg"
+                />
+              </span>
+              <span class="text-name">Huỳnh Kim Ngọc</span>
+              <span class="icon-down">
+                <i class="fas fa-chevron-down"></i>
+              </span>
+              <div class="user-dropdown-content">
+                <div class="user-option">Thông tin cá nhân</div>
+                <div class="user-option">Cài đặt tài khoản</div>
+                <div class="user-option">Đổi mật khẩu</div>
+                <div class="space-line-optiop"></div>
+                <div class="user-option">Quản lý bài đăng</div>
+                <div class="space-line-optiop"></div>
+                <div onclick="logout()" class="user-option">Đăng xuất</div>
+              </div>
+            </div>
           </div>
         </div>
       </nav>
@@ -89,34 +123,38 @@
             <div class="card-news">
               <div class="news-item">
                 <img
-                  src="../../Assets/images/thumnail-1.png"
+                  src="../../Assets/images/thumnail-2.png"
+                  class="thumnail"
                   width="187"
                   height="120"
                 />
                 <div class="news-information">
                   <p class="title2">Làm sao kiếm được nhiều tiền</p>
                   <div class="small-information flex-row">
-                    <div class="avatar-datetime flex-row">
-                      <img
-                        src="../../Assets/images/avatar-1.png"
-                        width="22"
-                        height="22"
-                        class="author-avatar"
-                      />
-                      <p class="figures">29/06/2021</p>
+                    <div class="flex-row">
+                      <div class="avatar-datetime flex-row">
+                        <img
+                          src="../../Assets/images/avatar-1.png"
+                          width="22"
+                          height="22"
+                          class="author-avatar"
+                        />
+                        <p class="figures">29/06/2021</p>
+                      </div>
+                      <div class="views flex-row">
+                        <i class="fas fa-eye sm-icon"></i>
+                        <p class="figures">435</p>
+                      </div>
+                      <div class="comments flex-row">
+                        <i class="fas fa-comment sm-icon"></i>
+                        <p class="figures">323</p>
+                      </div>
                     </div>
-                    <div class="views flex-row">
-                      <i class="fas fa-eye sm-icon"></i>
-                      <p class="figures">435</p>
+                    <div class="btn-container">
+                      <button class="fb-btn">
+                        <i class="fab fa-facebook-f"></i> Chia sẻ 97
+                      </button>
                     </div>
-                    <div class="comments flex-row">
-                      <i class="fas fa-comment sm-icon"></i>
-                      <p class="figures">323</p>
-                    </div>
-
-                    <button class="fb-btn">
-                      <i class="fab fa-facebook-f"></i> Chia sẻ 97
-                    </button>
                   </div>
                   <div class="news-description">
                     Giáo dục luôn là vấn đề được quan tâm hàng đầu đối với mọi
@@ -127,34 +165,38 @@
               </div>
               <div class="news-item">
                 <img
-                  src="../../Assets/images/thumnail-1.png"
+                  src="../../Assets/images/thumnail-2.png"
+                  class="thumnail"
                   width="187"
                   height="120"
                 />
                 <div class="news-information">
                   <p class="title2">Làm sao kiếm được nhiều tiền</p>
                   <div class="small-information flex-row">
-                    <div class="avatar-datetime flex-row">
-                      <img
-                        src="../../Assets/images/avatar-1.png"
-                        width="22"
-                        height="22"
-                        class="author-avatar"
-                      />
-                      <p class="figures">29/06/2021</p>
+                    <div class="flex-row">
+                      <div class="avatar-datetime flex-row">
+                        <img
+                          src="../../Assets/images/avatar-1.png"
+                          width="22"
+                          height="22"
+                          class="author-avatar"
+                        />
+                        <p class="figures">29/06/2021</p>
+                      </div>
+                      <div class="views flex-row">
+                        <i class="fas fa-eye sm-icon"></i>
+                        <p class="figures">435</p>
+                      </div>
+                      <div class="comments flex-row">
+                        <i class="fas fa-comment sm-icon"></i>
+                        <p class="figures">323</p>
+                      </div>
                     </div>
-                    <div class="views flex-row">
-                      <i class="fas fa-eye sm-icon"></i>
-                      <p class="figures">435</p>
+                    <div class="btn-container">
+                      <button class="fb-btn">
+                        <i class="fab fa-facebook-f"></i> Chia sẻ 97
+                      </button>
                     </div>
-                    <div class="comments flex-row">
-                      <i class="fas fa-comment sm-icon"></i>
-                      <p class="figures">323</p>
-                    </div>
-
-                    <button class="fb-btn">
-                      <i class="fab fa-facebook-f"></i> Chia sẻ 97
-                    </button>
                   </div>
                   <div class="news-description">
                     Giáo dục luôn là vấn đề được quan tâm hàng đầu đối với mọi
@@ -165,34 +207,38 @@
               </div>
               <div class="news-item">
                 <img
-                  src="../../Assets/images/thumnail-1.png"
+                  src="../../Assets/images/thumnail-2.png"
+                  class="thumnail"
                   width="187"
                   height="120"
                 />
                 <div class="news-information">
                   <p class="title2">Làm sao kiếm được nhiều tiền</p>
                   <div class="small-information flex-row">
-                    <div class="avatar-datetime flex-row">
-                      <img
-                        src="../../Assets/images/avatar-1.png"
-                        width="22"
-                        height="22"
-                        class="author-avatar"
-                      />
-                      <p class="figures">29/06/2021</p>
+                    <div class="flex-row">
+                      <div class="avatar-datetime flex-row">
+                        <img
+                          src="../../Assets/images/avatar-1.png"
+                          width="22"
+                          height="22"
+                          class="author-avatar"
+                        />
+                        <p class="figures">29/06/2021</p>
+                      </div>
+                      <div class="views flex-row">
+                        <i class="fas fa-eye sm-icon"></i>
+                        <p class="figures">435</p>
+                      </div>
+                      <div class="comments flex-row">
+                        <i class="fas fa-comment sm-icon"></i>
+                        <p class="figures">323</p>
+                      </div>
                     </div>
-                    <div class="views flex-row">
-                      <i class="fas fa-eye sm-icon"></i>
-                      <p class="figures">435</p>
+                    <div class="btn-container">
+                      <button class="fb-btn">
+                        <i class="fab fa-facebook-f"></i> Chia sẻ 97
+                      </button>
                     </div>
-                    <div class="comments flex-row">
-                      <i class="fas fa-comment sm-icon"></i>
-                      <p class="figures">323</p>
-                    </div>
-
-                    <button class="fb-btn">
-                      <i class="fab fa-facebook-f"></i> Chia sẻ 97
-                    </button>
                   </div>
                   <div class="news-description">
                     Giáo dục luôn là vấn đề được quan tâm hàng đầu đối với mọi
@@ -203,34 +249,38 @@
               </div>
               <div class="news-item">
                 <img
-                  src="../../Assets/images/thumnail-1.png"
+                  src="../../Assets/images/thumnail-2.png"
+                  class="thumnail"
                   width="187"
                   height="120"
                 />
                 <div class="news-information">
                   <p class="title2">Làm sao kiếm được nhiều tiền</p>
                   <div class="small-information flex-row">
-                    <div class="avatar-datetime flex-row">
-                      <img
-                        src="../../Assets/images/avatar-1.png"
-                        width="22"
-                        height="22"
-                        class="author-avatar"
-                      />
-                      <p class="figures">29/06/2021</p>
+                    <div class="flex-row">
+                      <div class="avatar-datetime flex-row">
+                        <img
+                          src="../../Assets/images/avatar-1.png"
+                          width="22"
+                          height="22"
+                          class="author-avatar"
+                        />
+                        <p class="figures">29/06/2021</p>
+                      </div>
+                      <div class="views flex-row">
+                        <i class="fas fa-eye sm-icon"></i>
+                        <p class="figures">435</p>
+                      </div>
+                      <div class="comments flex-row">
+                        <i class="fas fa-comment sm-icon"></i>
+                        <p class="figures">323</p>
+                      </div>
                     </div>
-                    <div class="views flex-row">
-                      <i class="fas fa-eye sm-icon"></i>
-                      <p class="figures">435</p>
+                    <div class="btn-container">
+                      <button class="fb-btn">
+                        <i class="fab fa-facebook-f"></i> Chia sẻ 97
+                      </button>
                     </div>
-                    <div class="comments flex-row">
-                      <i class="fas fa-comment sm-icon"></i>
-                      <p class="figures">323</p>
-                    </div>
-
-                    <button class="fb-btn">
-                      <i class="fab fa-facebook-f"></i> Chia sẻ 97
-                    </button>
                   </div>
                   <div class="news-description">
                     Giáo dục luôn là vấn đề được quan tâm hàng đầu đối với mọi
@@ -241,34 +291,38 @@
               </div>
               <div class="news-item">
                 <img
-                  src="../../Assets/images/thumnail-1.png"
+                  src="../../Assets/images/thumnail-2.png"
+                  class="thumnail"
                   width="187"
                   height="120"
                 />
                 <div class="news-information">
                   <p class="title2">Làm sao kiếm được nhiều tiền</p>
                   <div class="small-information flex-row">
-                    <div class="avatar-datetime flex-row">
-                      <img
-                        src="../../Assets/images/avatar-1.png"
-                        width="22"
-                        height="22"
-                        class="author-avatar"
-                      />
-                      <p class="figures">29/06/2021</p>
+                    <div class="flex-row">
+                      <div class="avatar-datetime flex-row">
+                        <img
+                          src="../../Assets/images/avatar-1.png"
+                          width="22"
+                          height="22"
+                          class="author-avatar"
+                        />
+                        <p class="figures">29/06/2021</p>
+                      </div>
+                      <div class="views flex-row">
+                        <i class="fas fa-eye sm-icon"></i>
+                        <p class="figures">435</p>
+                      </div>
+                      <div class="comments flex-row">
+                        <i class="fas fa-comment sm-icon"></i>
+                        <p class="figures">323</p>
+                      </div>
                     </div>
-                    <div class="views flex-row">
-                      <i class="fas fa-eye sm-icon"></i>
-                      <p class="figures">435</p>
+                    <div class="btn-container">
+                      <button class="fb-btn">
+                        <i class="fab fa-facebook-f"></i> Chia sẻ 97
+                      </button>
                     </div>
-                    <div class="comments flex-row">
-                      <i class="fas fa-comment sm-icon"></i>
-                      <p class="figures">323</p>
-                    </div>
-
-                    <button class="fb-btn">
-                      <i class="fab fa-facebook-f"></i> Chia sẻ 97
-                    </button>
                   </div>
                   <div class="news-description">
                     Giáo dục luôn là vấn đề được quan tâm hàng đầu đối với mọi
@@ -279,34 +333,38 @@
               </div>
               <div class="news-item">
                 <img
-                  src="../../Assets/images/thumnail-1.png"
+                  src="../../Assets/images/thumnail-2.png"
+                  class="thumnail"
                   width="187"
                   height="120"
                 />
                 <div class="news-information">
                   <p class="title2">Làm sao kiếm được nhiều tiền</p>
                   <div class="small-information flex-row">
-                    <div class="avatar-datetime flex-row">
-                      <img
-                        src="../../Assets/images/avatar-1.png"
-                        width="22"
-                        height="22"
-                        class="author-avatar"
-                      />
-                      <p class="figures">29/06/2021</p>
+                    <div class="flex-row">
+                      <div class="avatar-datetime flex-row">
+                        <img
+                          src="../../Assets/images/avatar-1.png"
+                          width="22"
+                          height="22"
+                          class="author-avatar"
+                        />
+                        <p class="figures">29/06/2021</p>
+                      </div>
+                      <div class="views flex-row">
+                        <i class="fas fa-eye sm-icon"></i>
+                        <p class="figures">435</p>
+                      </div>
+                      <div class="comments flex-row">
+                        <i class="fas fa-comment sm-icon"></i>
+                        <p class="figures">323</p>
+                      </div>
                     </div>
-                    <div class="views flex-row">
-                      <i class="fas fa-eye sm-icon"></i>
-                      <p class="figures">435</p>
+                    <div class="btn-container">
+                      <button class="fb-btn">
+                        <i class="fab fa-facebook-f"></i> Chia sẻ 97
+                      </button>
                     </div>
-                    <div class="comments flex-row">
-                      <i class="fas fa-comment sm-icon"></i>
-                      <p class="figures">323</p>
-                    </div>
-
-                    <button class="fb-btn">
-                      <i class="fab fa-facebook-f"></i> Chia sẻ 97
-                    </button>
                   </div>
                   <div class="news-description">
                     Giáo dục luôn là vấn đề được quan tâm hàng đầu đối với mọi
@@ -317,34 +375,38 @@
               </div>
               <div class="news-item">
                 <img
-                  src="../../Assets/images/thumnail-1.png"
+                  src="../../Assets/images/thumnail-2.png"
+                  class="thumnail"
                   width="187"
                   height="120"
                 />
                 <div class="news-information">
                   <p class="title2">Làm sao kiếm được nhiều tiền</p>
                   <div class="small-information flex-row">
-                    <div class="avatar-datetime flex-row">
-                      <img
-                        src="../../Assets/images/avatar-1.png"
-                        width="22"
-                        height="22"
-                        class="author-avatar"
-                      />
-                      <p class="figures">29/06/2021</p>
+                    <div class="flex-row">
+                      <div class="avatar-datetime flex-row">
+                        <img
+                          src="../../Assets/images/avatar-1.png"
+                          width="22"
+                          height="22"
+                          class="author-avatar"
+                        />
+                        <p class="figures">29/06/2021</p>
+                      </div>
+                      <div class="views flex-row">
+                        <i class="fas fa-eye sm-icon"></i>
+                        <p class="figures">435</p>
+                      </div>
+                      <div class="comments flex-row">
+                        <i class="fas fa-comment sm-icon"></i>
+                        <p class="figures">323</p>
+                      </div>
                     </div>
-                    <div class="views flex-row">
-                      <i class="fas fa-eye sm-icon"></i>
-                      <p class="figures">435</p>
+                    <div class="btn-container">
+                      <button class="fb-btn">
+                        <i class="fab fa-facebook-f"></i> Chia sẻ 97
+                      </button>
                     </div>
-                    <div class="comments flex-row">
-                      <i class="fas fa-comment sm-icon"></i>
-                      <p class="figures">323</p>
-                    </div>
-
-                    <button class="fb-btn">
-                      <i class="fab fa-facebook-f"></i> Chia sẻ 97
-                    </button>
                   </div>
                   <div class="news-description">
                     Giáo dục luôn là vấn đề được quan tâm hàng đầu đối với mọi
@@ -355,34 +417,38 @@
               </div>
               <div class="news-item">
                 <img
-                  src="../../Assets/images/thumnail-1.png"
+                  src="../../Assets/images/thumnail-2.png"
+                  class="thumnail"
                   width="187"
                   height="120"
                 />
                 <div class="news-information">
                   <p class="title2">Làm sao kiếm được nhiều tiền</p>
                   <div class="small-information flex-row">
-                    <div class="avatar-datetime flex-row">
-                      <img
-                        src="../../Assets/images/avatar-1.png"
-                        width="22"
-                        height="22"
-                        class="author-avatar"
-                      />
-                      <p class="figures">29/06/2021</p>
+                    <div class="flex-row">
+                      <div class="avatar-datetime flex-row">
+                        <img
+                          src="../../Assets/images/avatar-1.png"
+                          width="22"
+                          height="22"
+                          class="author-avatar"
+                        />
+                        <p class="figures">29/06/2021</p>
+                      </div>
+                      <div class="views flex-row">
+                        <i class="fas fa-eye sm-icon"></i>
+                        <p class="figures">435</p>
+                      </div>
+                      <div class="comments flex-row">
+                        <i class="fas fa-comment sm-icon"></i>
+                        <p class="figures">323</p>
+                      </div>
                     </div>
-                    <div class="views flex-row">
-                      <i class="fas fa-eye sm-icon"></i>
-                      <p class="figures">435</p>
+                    <div class="btn-container">
+                      <button class="fb-btn">
+                        <i class="fab fa-facebook-f"></i> Chia sẻ 97
+                      </button>
                     </div>
-                    <div class="comments flex-row">
-                      <i class="fas fa-comment sm-icon"></i>
-                      <p class="figures">323</p>
-                    </div>
-
-                    <button class="fb-btn">
-                      <i class="fab fa-facebook-f"></i> Chia sẻ 97
-                    </button>
                   </div>
                   <div class="news-description">
                     Giáo dục luôn là vấn đề được quan tâm hàng đầu đối với mọi
@@ -393,34 +459,122 @@
               </div>
               <div class="news-item">
                 <img
-                  src="../../Assets/images/thumnail-1.png"
+                  src="../../Assets/images/thumnail-2.png"
+                  class="thumnail"
                   width="187"
                   height="120"
                 />
                 <div class="news-information">
                   <p class="title2">Làm sao kiếm được nhiều tiền</p>
                   <div class="small-information flex-row">
-                    <div class="avatar-datetime flex-row">
-                      <img
-                        src="../../Assets/images/avatar-1.png"
-                        width="22"
-                        height="22"
-                        class="author-avatar"
-                      />
-                      <p class="figures">29/06/2021</p>
+                    <div class="flex-row">
+                      <div class="avatar-datetime flex-row">
+                        <img
+                          src="../../Assets/images/avatar-1.png"
+                          width="22"
+                          height="22"
+                          class="author-avatar"
+                        />
+                        <p class="figures">29/06/2021</p>
+                      </div>
+                      <div class="views flex-row">
+                        <i class="fas fa-eye sm-icon"></i>
+                        <p class="figures">435</p>
+                      </div>
+                      <div class="comments flex-row">
+                        <i class="fas fa-comment sm-icon"></i>
+                        <p class="figures">323</p>
+                      </div>
                     </div>
-                    <div class="views flex-row">
-                      <i class="fas fa-eye sm-icon"></i>
-                      <p class="figures">435</p>
+                    <div class="btn-container">
+                      <button class="fb-btn">
+                        <i class="fab fa-facebook-f"></i> Chia sẻ 97
+                      </button>
                     </div>
-                    <div class="comments flex-row">
-                      <i class="fas fa-comment sm-icon"></i>
-                      <p class="figures">323</p>
+                  </div>
+                  <div class="news-description">
+                    Giáo dục luôn là vấn đề được quan tâm hàng đầu đối với mọi
+                    thời đại. Và cha mẹ nào cũng luôn muốn con mình được học tập
+                    và trưởng thành trong môi...
+                  </div>
+                </div>
+              </div>
+              <div class="news-item">
+                <img
+                  src="../../Assets/images/thumnail-2.png"
+                  class="thumnail"
+                  width="187"
+                  height="120"
+                />
+                <div class="news-information">
+                  <p class="title2">Làm sao kiếm được nhiều tiền</p>
+                  <div class="small-information flex-row">
+                    <div class="flex-row">
+                      <div class="avatar-datetime flex-row">
+                        <img
+                          src="../../Assets/images/avatar-1.png"
+                          width="22"
+                          height="22"
+                          class="author-avatar"
+                        />
+                        <p class="figures">29/06/2021</p>
+                      </div>
+                      <div class="views flex-row">
+                        <i class="fas fa-eye sm-icon"></i>
+                        <p class="figures">435</p>
+                      </div>
+                      <div class="comments flex-row">
+                        <i class="fas fa-comment sm-icon"></i>
+                        <p class="figures">323</p>
+                      </div>
                     </div>
-
-                    <button class="fb-btn">
-                      <i class="fab fa-facebook-f"></i> Chia sẻ 97
-                    </button>
+                    <div class="btn-container">
+                      <button class="fb-btn">
+                        <i class="fab fa-facebook-f"></i> Chia sẻ 97
+                      </button>
+                    </div>
+                  </div>
+                  <div class="news-description">
+                    Giáo dục luôn là vấn đề được quan tâm hàng đầu đối với mọi
+                    thời đại. Và cha mẹ nào cũng luôn muốn con mình được học tập
+                    và trưởng thành trong môi...
+                  </div>
+                </div>
+              </div>
+              <div class="news-item">
+                <img
+                  src="../../Assets/images/thumnail-2.png"
+                  class="thumnail"
+                  width="187"
+                  height="120"
+                />
+                <div class="news-information">
+                  <p class="title2">Làm sao kiếm được nhiều tiền</p>
+                  <div class="small-information flex-row">
+                    <div class="flex-row">
+                      <div class="avatar-datetime flex-row">
+                        <img
+                          src="../../Assets/images/avatar-1.png"
+                          width="22"
+                          height="22"
+                          class="author-avatar"
+                        />
+                        <p class="figures">29/06/2021</p>
+                      </div>
+                      <div class="views flex-row">
+                        <i class="fas fa-eye sm-icon"></i>
+                        <p class="figures">435</p>
+                      </div>
+                      <div class="comments flex-row">
+                        <i class="fas fa-comment sm-icon"></i>
+                        <p class="figures">323</p>
+                      </div>
+                    </div>
+                    <div class="btn-container">
+                      <button class="fb-btn">
+                        <i class="fab fa-facebook-f"></i> Chia sẻ 97
+                      </button>
+                    </div>
                   </div>
                   <div class="news-description">
                     Giáo dục luôn là vấn đề được quan tâm hàng đầu đối với mọi
@@ -434,14 +588,31 @@
               <div class="tags-authors">
                 <div class="tags">
                   <div style="padding-right: 15px">
-                    <span class="categories-tags">Mới nhất</span>
-                    <span class="categories-tags">Mới nhất</span>
-                    <span class="categories-tags">Mới nhất</span>
-                    <span class="categories-tags">Mới nhất</span>
+                    <span class="categories-tags">Du học</span>
+                    <span class="categories-tags">Kinh doanh</span>
+                    <span class="categories-tags">Mua bán nhà đất</span>
+                    <span class="categories-tags">Kiểm tra xe</span>
+                    <span class="categories-tags">Luật</span>
+                    <span class="categories-tags">Bất động sản</span>
+                    <span class="categories-tags">Tài chính</span>
+                    <span class="categories-tags">Làm đẹp</span>
+                    <span class="categories-tags">Học tập</span>
+                    <span class="categories-tags">Dịch vụ</span>
+                    <span class="categories-tags">Công nghệ</span>
+                    <span class="categories-tags">Cuộc sống</span>
+                    <span class="categories-tags">Năng khiếu</span>
+                    <span class="categories-tags">SEO</span>
+                    <span class="categories-tags">Content</span>
+                    <span class="categories-tags">IT</span>
+                    <span class="categories-tags">Design</span>
                     <div class="divider"></div>
-                    <span class="categories-tags">Mới nhất</span>
+                    <span class="categories-tags">Hà Nội</span>
+                    <span class="categories-tags">Việt Nam</span>
+                    <span class="categories-tags">Thế giới</span>
                     <div class="divider"></div>
-                    <span class="categories-tags">Mới nhất</span>
+                    <span class="categories-tags">Giá rẻ</span>
+                    <span class="categories-tags">Chi phí thấp</span>
+                    <span class="categories-tags">Hiệu quả</span>
                   </div>
                 </div>
                 <div class="authors">
@@ -641,34 +812,38 @@
               <div class="other-news">
                 <div class="news-item">
                   <img
-                    src="../../Assets/images/thumnail-1.png"
+                    src="../../Assets/images/thumnail-2.png"
+                    class="thumnail"
                     width="187"
                     height="120"
                   />
                   <div class="news-information">
                     <p class="title2">Làm sao kiếm được nhiều tiền</p>
                     <div class="small-information flex-row">
-                      <div class="avatar-datetime flex-row">
-                        <img
-                          src="../../Assets/images/avatar-1.png"
-                          width="22"
-                          height="22"
-                          class="author-avatar"
-                        />
-                        <p class="figures">29/06/2021</p>
+                      <div class="flex-row">
+                        <div class="avatar-datetime flex-row">
+                          <img
+                            src="../../Assets/images/avatar-1.png"
+                            width="22"
+                            height="22"
+                            class="author-avatar"
+                          />
+                          <p class="figures">29/06/2021</p>
+                        </div>
+                        <div class="views flex-row">
+                          <i class="fas fa-eye sm-icon"></i>
+                          <p class="figures">435</p>
+                        </div>
+                        <div class="comments flex-row">
+                          <i class="fas fa-comment sm-icon"></i>
+                          <p class="figures">323</p>
+                        </div>
                       </div>
-                      <div class="views flex-row">
-                        <i class="fas fa-eye sm-icon"></i>
-                        <p class="figures">435</p>
+                      <div class="btn-container">
+                        <button class="fb-btn">
+                          <i class="fab fa-facebook-f"></i> Chia sẻ 97
+                        </button>
                       </div>
-                      <div class="comments flex-row">
-                        <i class="fas fa-comment sm-icon"></i>
-                        <p class="figures">323</p>
-                      </div>
-
-                      <button class="fb-btn">
-                        <i class="fab fa-facebook-f"></i> Chia sẻ 97
-                      </button>
                     </div>
                     <div class="news-description">
                       Giáo dục luôn là vấn đề được quan tâm hàng đầu đối với mọi
@@ -679,34 +854,38 @@
                 </div>
                 <div class="news-item">
                   <img
-                    src="../../Assets/images/thumnail-1.png"
+                    src="../../Assets/images/thumnail-2.png"
+                    class="thumnail"
                     width="187"
                     height="120"
                   />
                   <div class="news-information">
                     <p class="title2">Làm sao kiếm được nhiều tiền</p>
                     <div class="small-information flex-row">
-                      <div class="avatar-datetime flex-row">
-                        <img
-                          src="../../Assets/images/avatar-1.png"
-                          width="22"
-                          height="22"
-                          class="author-avatar"
-                        />
-                        <p class="figures">29/06/2021</p>
+                      <div class="flex-row">
+                        <div class="avatar-datetime flex-row">
+                          <img
+                            src="../../Assets/images/avatar-1.png"
+                            width="22"
+                            height="22"
+                            class="author-avatar"
+                          />
+                          <p class="figures">29/06/2021</p>
+                        </div>
+                        <div class="views flex-row">
+                          <i class="fas fa-eye sm-icon"></i>
+                          <p class="figures">435</p>
+                        </div>
+                        <div class="comments flex-row">
+                          <i class="fas fa-comment sm-icon"></i>
+                          <p class="figures">323</p>
+                        </div>
                       </div>
-                      <div class="views flex-row">
-                        <i class="fas fa-eye sm-icon"></i>
-                        <p class="figures">435</p>
+                      <div class="btn-container">
+                        <button class="fb-btn">
+                          <i class="fab fa-facebook-f"></i> Chia sẻ 97
+                        </button>
                       </div>
-                      <div class="comments flex-row">
-                        <i class="fas fa-comment sm-icon"></i>
-                        <p class="figures">323</p>
-                      </div>
-
-                      <button class="fb-btn">
-                        <i class="fab fa-facebook-f"></i> Chia sẻ 97
-                      </button>
                     </div>
                     <div class="news-description">
                       Giáo dục luôn là vấn đề được quan tâm hàng đầu đối với mọi
@@ -717,34 +896,38 @@
                 </div>
                 <div class="news-item">
                   <img
-                    src="../../Assets/images/thumnail-1.png"
+                    src="../../Assets/images/thumnail-2.png"
+                    class="thumnail"
                     width="187"
                     height="120"
                   />
                   <div class="news-information">
                     <p class="title2">Làm sao kiếm được nhiều tiền</p>
                     <div class="small-information flex-row">
-                      <div class="avatar-datetime flex-row">
-                        <img
-                          src="../../Assets/images/avatar-1.png"
-                          width="22"
-                          height="22"
-                          class="author-avatar"
-                        />
-                        <p class="figures">29/06/2021</p>
+                      <div class="flex-row">
+                        <div class="avatar-datetime flex-row">
+                          <img
+                            src="../../Assets/images/avatar-1.png"
+                            width="22"
+                            height="22"
+                            class="author-avatar"
+                          />
+                          <p class="figures">29/06/2021</p>
+                        </div>
+                        <div class="views flex-row">
+                          <i class="fas fa-eye sm-icon"></i>
+                          <p class="figures">435</p>
+                        </div>
+                        <div class="comments flex-row">
+                          <i class="fas fa-comment sm-icon"></i>
+                          <p class="figures">323</p>
+                        </div>
                       </div>
-                      <div class="views flex-row">
-                        <i class="fas fa-eye sm-icon"></i>
-                        <p class="figures">435</p>
+                      <div class="btn-container">
+                        <button class="fb-btn">
+                          <i class="fab fa-facebook-f"></i> Chia sẻ 97
+                        </button>
                       </div>
-                      <div class="comments flex-row">
-                        <i class="fas fa-comment sm-icon"></i>
-                        <p class="figures">323</p>
-                      </div>
-
-                      <button class="fb-btn">
-                        <i class="fab fa-facebook-f"></i> Chia sẻ 97
-                      </button>
                     </div>
                     <div class="news-description">
                       Giáo dục luôn là vấn đề được quan tâm hàng đầu đối với mọi
@@ -755,34 +938,38 @@
                 </div>
                 <div class="news-item">
                   <img
-                    src="../../Assets/images/thumnail-1.png"
+                    src="../../Assets/images/thumnail-2.png"
+                    class="thumnail"
                     width="187"
                     height="120"
                   />
                   <div class="news-information">
                     <p class="title2">Làm sao kiếm được nhiều tiền</p>
                     <div class="small-information flex-row">
-                      <div class="avatar-datetime flex-row">
-                        <img
-                          src="../../Assets/images/avatar-1.png"
-                          width="22"
-                          height="22"
-                          class="author-avatar"
-                        />
-                        <p class="figures">29/06/2021</p>
+                      <div class="flex-row">
+                        <div class="avatar-datetime flex-row">
+                          <img
+                            src="../../Assets/images/avatar-1.png"
+                            width="22"
+                            height="22"
+                            class="author-avatar"
+                          />
+                          <p class="figures">29/06/2021</p>
+                        </div>
+                        <div class="views flex-row">
+                          <i class="fas fa-eye sm-icon"></i>
+                          <p class="figures">435</p>
+                        </div>
+                        <div class="comments flex-row">
+                          <i class="fas fa-comment sm-icon"></i>
+                          <p class="figures">323</p>
+                        </div>
                       </div>
-                      <div class="views flex-row">
-                        <i class="fas fa-eye sm-icon"></i>
-                        <p class="figures">435</p>
+                      <div class="btn-container">
+                        <button class="fb-btn">
+                          <i class="fab fa-facebook-f"></i> Chia sẻ 97
+                        </button>
                       </div>
-                      <div class="comments flex-row">
-                        <i class="fas fa-comment sm-icon"></i>
-                        <p class="figures">323</p>
-                      </div>
-
-                      <button class="fb-btn">
-                        <i class="fab fa-facebook-f"></i> Chia sẻ 97
-                      </button>
                     </div>
                     <div class="news-description">
                       Giáo dục luôn là vấn đề được quan tâm hàng đầu đối với mọi
@@ -793,34 +980,38 @@
                 </div>
                 <div class="news-item">
                   <img
-                    src="../../Assets/images/thumnail-1.png"
+                    src="../../Assets/images/thumnail-2.png"
+                    class="thumnail"
                     width="187"
                     height="120"
                   />
                   <div class="news-information">
                     <p class="title2">Làm sao kiếm được nhiều tiền</p>
                     <div class="small-information flex-row">
-                      <div class="avatar-datetime flex-row">
-                        <img
-                          src="../../Assets/images/avatar-1.png"
-                          width="22"
-                          height="22"
-                          class="author-avatar"
-                        />
-                        <p class="figures">29/06/2021</p>
+                      <div class="flex-row">
+                        <div class="avatar-datetime flex-row">
+                          <img
+                            src="../../Assets/images/avatar-1.png"
+                            width="22"
+                            height="22"
+                            class="author-avatar"
+                          />
+                          <p class="figures">29/06/2021</p>
+                        </div>
+                        <div class="views flex-row">
+                          <i class="fas fa-eye sm-icon"></i>
+                          <p class="figures">435</p>
+                        </div>
+                        <div class="comments flex-row">
+                          <i class="fas fa-comment sm-icon"></i>
+                          <p class="figures">323</p>
+                        </div>
                       </div>
-                      <div class="views flex-row">
-                        <i class="fas fa-eye sm-icon"></i>
-                        <p class="figures">435</p>
+                      <div class="btn-container">
+                        <button class="fb-btn">
+                          <i class="fab fa-facebook-f"></i> Chia sẻ 97
+                        </button>
                       </div>
-                      <div class="comments flex-row">
-                        <i class="fas fa-comment sm-icon"></i>
-                        <p class="figures">323</p>
-                      </div>
-
-                      <button class="fb-btn">
-                        <i class="fab fa-facebook-f"></i> Chia sẻ 97
-                      </button>
                     </div>
                     <div class="news-description">
                       Giáo dục luôn là vấn đề được quan tâm hàng đầu đối với mọi
