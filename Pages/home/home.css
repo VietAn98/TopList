@@ -147,6 +147,16 @@
   position: relative;
   display: inline-block;
 }
+.dropdown > i#menu-icon#shown {
+  position: relative;
+  display: inline-block;
+  /* visibility: visible; */
+}
+.dropdown > i#hidden {
+  position: relative;
+  display: none;
+  /* visibility: hidden; */
+}
 
 .dropdown-content {
   display: none;
@@ -420,6 +430,53 @@
   /* padding: 24px; */
 }
 
+.modal-content {
+  width: 460px;
+  margin: auto;
+  background-color: #fdfdfd;
+  position: relative;
+  padding: 0;
+  outline: 0;
+
+  box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%);
+  text-align: center;
+  border-radius: 20px;
+}
+.modal-content .modal-close-button {
+  cursor: pointer;
+  padding: 12px;
+}
+.modal-content .modal-close-button:hover {
+  opacity: 0.8;
+}
+.modal-content .modal-content-container {
+  padding: 30px 40px;
+}
+.modal-content .modal-content-container .form-input-field {
+  width: 380px;
+  height: 48px;
+  background: #ffffff;
+  /* Grey 2 */
+
+  border: 0.5px solid #acacb9;
+  box-sizing: border-box;
+  border-radius: 10px;
+  outline: none;
+
+  margin-bottom: 16px;
+}
+
+.modal-content .modal-content-container .form-input-field {
+  padding-left: 18px;
+}
+.modal-content .modal-content-container .form-submit-btn {
+  width: 100%;
+  margin-top: 8px;
+}
+.modal-content .modal-content-container .form-submit-btn:hover {
+  opacity: 0.8;
+}
+
 @media only screen and (max-width: 600px) {
   .footer {
     display: flex;
@@ -443,6 +500,16 @@
 @media only screen and (max-width: 760px) {
   .dropdown-content,
   .dropdown:hover .dropdown-content {
+    display: none;
+  }
+
+  .category-group .fas.fa-bars#menu-icon-shown {
+    display: none;
+  }
+  .category-group .fas.fa-bars#menu-icon-hidden {
+    display: inline-block;
+  }
+  .category-group .fas.fa-times {
     display: none;
   }
 }

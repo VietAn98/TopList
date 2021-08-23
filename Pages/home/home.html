@@ -12,12 +12,16 @@
       src="https://kit.fontawesome.com/8062565c7c.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
   </head>
 
-  <body>
+  <body onresize="onResizeWindow()" id="body">
     <script src="home.js"></script>
 
+    <!-- <header> -->
     <div include-html="../common/header.html"></div>
+    <!-- <div include-html="../common/side-nav.html"></div> -->
+    <!-- </header> -->
 
     <main>
       <section>
@@ -303,6 +307,150 @@
             Đây là 3 tiêu chí mà ABC luôn muốn hướng tới để đem lại những thông
             tin hữu ích cho cộng đồng
           </p>
+        </div>
+
+        <div id="modal-signup" class="w3-modal">
+          <div class="modal-content w3-animate-top">
+            <span
+              onclick="document.getElementById('modal-signup').style.display='none'"
+              class="modal-close-button w3-display-topright"
+              >&times;</span
+            >
+            <div class="modal-content-container">
+              <h3 class="title1" style="margin-bottom: 30px">Đăng ký</h3>
+
+              <form action="" method="get">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                  class="form-input-field email"
+                />
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  placeholder="Tên đăng nhập"
+                  class="form-input-field username"
+                />
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Mật khẩu"
+                  class="form-input-field password"
+                />
+
+                <button class="primary-btn form-submit-btn">Đăng ký</button>
+              </form>
+              <p>
+                Đăng ký là bạn đồng ý với <a href="#">Điều khoản</a> của chúng
+                tôi.
+              </p>
+              <p>Hoặc</p>
+
+              <button class="outline-btn-2" style="width: 100%">
+                <img
+                  src="../../Assets/images/google.png"
+                  style="margin-right: 20px"
+                />Đăng nhập bằng Google
+              </button>
+
+              <p>
+                Bạn đã có tài khoản?
+                <a href="#">Đăng nhập</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div id="modal-signin" class="w3-modal">
+          <div class="modal-content w3-animate-top">
+            <span
+              onclick="document.getElementById('modal-signin').style.display='none'"
+              class="modal-close-button w3-display-topright"
+              >&times;</span
+            >
+            <div class="modal-content-container">
+              <h3 class="title1" style="margin-bottom: 30px">Đăng nhập</h3>
+
+              <form action="" method="get">
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  placeholder="Tên đăng nhập hoặc Email"
+                  class="form-input-field username"
+                />
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Mật khẩu"
+                  class="form-input-field password"
+                />
+
+                <button class="primary-btn form-submit-btn">Đăng nhập</button>
+              </form>
+              <div
+                class="flex-row"
+                style="justify-content: space-between; margin-top: 17px"
+              >
+                <div>
+                  <input
+                    type="checkbox"
+                    id="remember"
+                    name="remember"
+                    value="remember"
+                  /><label for="vehicle1">Nhớ tài khoản</label>
+                </div>
+                <a href="#">Quên mật khẩu?</a>
+              </div>
+              <p>Hoặc</p>
+
+              <button class="outline-btn-2" style="width: 100%">
+                <img
+                  src="../../Assets/images/google.png"
+                  style="margin-right: 20px"
+                />Đăng nhập bằng Google
+              </button>
+
+              <p>
+                Bạn chưa có tài khoản?
+                <a href="#">Đăng kí</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div id="modal-forget-password" class="w3-modal">
+          <div class="modal-content w3-animate-top">
+            <span
+              onclick="document.getElementById('modal-forget-password').style.display='none'"
+              class="modal-close-button w3-display-topright"
+              >&times;</span
+            >
+            <div class="modal-content-container">
+              <h3 class="title1" style="margin-bottom: 30px">Quên mật khẩu</h3>
+
+              <p>
+                Vui lòng nhập Email bạn đã đăng ký với chúng tôi, chúng tôi sẽ
+                gửi link thiết lập lại mật khẩu cho bạn.
+              </p>
+              <form action="" method="get">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                  class="form-input-field email"
+                />
+
+                <button class="primary-btn form-submit-btn">Gửi</button>
+              </form>
+            </div>
+          </div>
         </div>
       </section>
     </main>

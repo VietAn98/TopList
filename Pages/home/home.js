@@ -12,10 +12,62 @@ function logout() {
 
 function openNav() {
   document.getElementById("sideNavigate").style.width = "100%";
+  document.getElementById("closebtn").style.display = "inline-block";
+  document.getElementById("menu-icon-hidden").style.display = "none";
+  document.getElementById("body").style.overflowY = "hidden";
 }
 
 function closeNav() {
   document.getElementById("sideNavigate").style.width = "0";
+  document.getElementById("closebtn").style.display = "none";
+  document.getElementById("menu-icon-hidden").style.display = "inline-block";
+  document.getElementById("body").style.overflowY = "scroll";
+}
+
+var i = 0;
+function onClickCategories() {
+  i = i += 1;
+  if (i % 2 === 0) {
+    //down
+    document.getElementById("list-tags").style.display = "none";
+    document.getElementById("category-fa-chevron-up").style.display = "none";
+    document.getElementById("category-fa-chevron-down").style.display = "block";
+  } else {
+    //up
+    document.getElementById("list-tags").style.display = "block";
+    document.getElementById("category-fa-chevron-up").style.display = "block";
+    document.getElementById("category-fa-chevron-down").style.display = "none";
+  }
+}
+
+var p = 0;
+function onClickLanguage() {
+  p = p += 1;
+  if (p % 2 === 0) {
+    document.getElementById("list-language").style.display = "none";
+    document.getElementById("language-fa-chevron-up").style.display = "none";
+    document.getElementById("language-fa-chevron-down").style.display = "block";
+  } else {
+    document.getElementById("list-language").style.display = "block";
+    document.getElementById("language-fa-chevron-up").style.display = "block";
+    document.getElementById("language-fa-chevron-down").style.display = "none";
+  }
+}
+
+var k = 0;
+function onClickUserInfo() {
+  k = k += 1;
+  if (k % 2 === 0) {
+    document.getElementById("user-dropdown-content-mobile").style.display =
+      "none";
+    document.getElementById("user-fa-chevron-up").style.display = "none";
+    document.getElementById("user-fa-chevron-down").style.display = "block";
+  } else {
+    document.getElementById("user-dropdown-content-mobile").style.display =
+      "block";
+    document.getElementById("user-fa-chevron-up").style.display = "block";
+    document.getElementById("user-fa-chevron-down").style.display = "none";
+  }
 }
 
 function includeHTML() {
@@ -47,5 +99,13 @@ function includeHTML() {
       /* Exit the function: */
       return;
     }
+  }
+}
+
+function onResizeWindow() {
+  var w = window.outerWidth;
+  if (w >= 1920) {
+    document.getElementById("closebtn").style.display = "none";
+    document.getElementById("menu-icon-hidden").style.display = "none";
   }
 }
