@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div id="sideNavigate" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            >&times;</a
+          >
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Clients</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="nav-container">
+          <div class="first-section">
+            <h1 class="logo">LOGO</h1>
+            <div class="category-group">
+              <div class="dropdown">
+                <i class="fas fa-bars" id="menu-icon" onclick="openNav()"></i>
+                <div class="dropdown-content">
+                  <span class="categories-tags">Mới nhất</span>
+                  <div class="divider"></div>
+                  <span class="categories-tags">Mới nhất</span>
+                  <div class="divider"></div>
+                  <span class="categories-tags">Mới nhất</span>
+                </div>
+              </div>
+              <p>Danh mục</p>
+            </div>
+            <div class="search-bar input-icon">
+              <i class="fas fa-search icon"></i>
+              <input
+                type="search"
+                id="search"
+                name="search"
+                placeholder="Tìm kiếm"
+                class="input-field"
+              />
+            </div>
+          </div>
+          <div class="separate"></div>
+          <div class="second-section">
+            <div class="language">
+              <img
+                src="../../Assets/images/globe.png"
+                width="26"
+                class="i-globe"
+                alt="globe"
+              />
+              <div class="dropdown">
+                <div class="language-dropdown-content">
+                  <div class="language-option">Tiếng Việt</div>
+                  <div class="language-option">English</div>
+                </div>
+                <div class="language-dropdown">
+                  <p>VI</p>
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+              </div>
+            </div>
+
+            <button onclick="login()" id="btnlogin" class="primary-btn">
+              Đăng nhập
+            </button>
+            <button id="btnregister" class="outline-btn">Đăng ký</button>
+            <div class="current-user" id="current-user">
+              <span class="wrap-avatar">
+                <img
+                  class="user-avatar"
+                  src="../../Assets/images/avar-user.jpg"
+                />
+              </span>
+              <span class="text-name">Huỳnh Kim Ngọc</span>
+              <span class="icon-down">
+                <i class="fas fa-chevron-down"></i>
+              </span>
+              <div class="user-dropdown-content">
+                <div class="user-option">Thông tin cá nhân</div>
+                <div class="user-option">Cài đặt tài khoản</div>
+                <div class="user-option">Đổi mật khẩu</div>
+                <div class="space-line-optiop"></div>
+                <div class="user-option">Quản lý bài đăng</div>
+                <div class="space-line-optiop"></div>
+                <div onclick="logout()" class="user-option">Đăng xuất</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+  </body>
+</html>
