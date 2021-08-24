@@ -13,6 +13,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <script src="./script.js"></script>
   </head>
 
   <body onresize="onResizeWindow()" id="body">
@@ -50,15 +51,37 @@
               <p class="title2">Trần Thị Kim Thảo</p>
 
               <div class="action-container">
-                <p class="title3 selected"><a href="#">Thông tin cá nhân</a></p>
-                <p class="title3"><a href="#">Cài đặt tài khoản</a></p>
-                <p class="title3"><a href="#">Đổi mật khẩu</a></p>
-                <p class="title3"><a href="#">Quản lý bài viết</a></p>
-                <p class="title3"><a href="#">Đăng xuất</a></p>
+                <p
+                  class="title3 tablinks"
+                  onclick="openTab(event, 'information')"
+                >
+                  Thông tin cá nhân
+                </p>
+                <p class="title3 tablinks" onclick="openTab(event, 'settings')">
+                  Cài đặt tài khoản
+                </p>
+                <p
+                  class="title3 tablinks"
+                  onclick="openTab(event, 'change-password')"
+                >
+                  Đổi mật khẩu
+                </p>
+                <p
+                  class="title3 tablinks"
+                  onclick="openTab(event, 'manage-post')"
+                >
+                  Quản lý bài viết
+                </p>
+                <p class="title3 tablinks">Đăng xuất</p>
               </div>
             </div>
-            <!-- <div class="right-container"> -->
-            <!-- <form action="" method="get" class="form-account information">
+            <div class="right-container" id="right-container">
+              <form
+                action=""
+                method="get"
+                id="information"
+                class="form-account tabcontent"
+              >
                 <p class="title4 form-title">Tên</p>
                 <input
                   type="text"
@@ -105,8 +128,13 @@
                 />
 
                 <button class="primary-btn form-submit-btn">Thay đổi</button>
-              </form> -->
-            <!-- <form action="" method="get" class="form-account settings">
+              </form>
+              <form
+                action=""
+                method="get"
+                id="settings"
+                class="form-account tabcontent"
+              >
                 <p class="title4 form-title">Tên đăng nhập</p>
                 <input
                   type="text"
@@ -128,8 +156,13 @@
                 <button class="primary-btn form-submit-btn">
                   Lưu thay đổi
                 </button>
-              </form> -->
-            <!-- <form action="" method="get" class="form-account change-password">
+              </form>
+              <form
+                action=""
+                method="get"
+                id="change-password"
+                class="form-account tabcontent"
+              >
                 <p class="title4 form-title">Mật khẩu cũ</p>
                 <input
                   type="password"
@@ -160,10 +193,10 @@
                 <button class="primary-btn form-submit-btn">
                   Đổi mật khẩu
                 </button>
-              </form> -->
-            <!-- </div> -->
-            <div class="right-container-w-post">
-              <div class="posts-container">
+              </form>
+            </div>
+            <div class="right-container-w-post" id="right-container-w-post">
+              <div class="posts-container" id="manage-post">
                 <p class="title2">Thông tin về các bài viết của bạn</p>
 
                 <div class="filter-container">
@@ -177,17 +210,37 @@
                       Ngày post
                       <img src="../../Assets/images/chevron-down.png" />
                     </button>
+
                     <div id="calendar" class="dropdown-calendar">
                       <div class="calendar">
                         <div class="month-year">
-                          <img src="../../Assets/images/chevron-left.png" />
-                          <select id="month" class="month">
-                            <option>Tháng 4</option>
-                          </select>
-                          <select id="year" class="year">
-                            <option>2021</option>
-                          </select>
-                          <img src="../../Assets/images/chevron-right.png" />
+                          <img
+                            src="../../Assets/images/chevron-left.png"
+                            class="prev"
+                          />
+
+                          <div class="flex-row" style="align-items: center">
+                            <div class="month" id="month"></div>
+                            <img
+                              src="../../Assets/images/arrow-down.png"
+                              width="8"
+                              height="8"
+                              style="margin-left: 20px"
+                            />
+                          </div>
+                          <div class="flex-row" style="align-items: center">
+                            <div class="year" id="year"></div>
+                            <img
+                              src="../../Assets/images/arrow-down.png"
+                              width="8"
+                              height="8"
+                              style="margin-left: 20px"
+                            />
+                          </div>
+                          <img
+                            src="../../Assets/images/chevron-right.png"
+                            class="next"
+                          />
                         </div>
                         <div class="weekdays">
                           <div>T2</div>
@@ -213,6 +266,10 @@
                       Tình trạng
                       <img src="../../Assets/images/chevron-down.png" />
                     </button>
+                    <div id="list-status" class="list-filter">
+                      <div class="filter-item">Chờ duyệt</div>
+                      <div class="filter-item">Đã xuất bản</div>
+                    </div>
                   </div>
 
                   <div class="payment-container">
@@ -225,6 +282,10 @@
                       Thanh toán
                       <img src="../../Assets/images/chevron-down.png" />
                     </button>
+                    <div id="list-payment" class="list-filter">
+                      <div class="filter-item">Chưa thanh toán</div>
+                      <div class="filter-item">Đã thanh toán</div>
+                    </div>
                   </div>
 
                   <button class="primary-btn filter-btn">Lọc</button>
@@ -345,6 +406,7 @@
 
     <script>
       includeHTML();
+      renderCalendar();
     </script>
   </body>
 </html>
