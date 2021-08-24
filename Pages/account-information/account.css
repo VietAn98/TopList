@@ -312,3 +312,67 @@
 .list-filter .filter-item:first-child:hover {
   border-radius: 10px 10px 0px 0px;
 }
+
+@media only screen and (max-width: 960px) {
+  .account-content {
+    width: 100%;
+    padding: 0px 12px;
+    display: flex;
+    flex-direction: column;
+  }
+  .select-box-mobile {
+    border-color: transparent !important;
+    background-color: white;
+    width: 100% !important;
+    border-radius: 10px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 9px 17px;
+    margin-bottom: 16px;
+  }
+  .avatar-container-bg {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+  }
+
+  .information-container {
+    background: #ffffff;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 12px;
+  }
+
+  .avatar-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  .form-account-mobile {
+    text-align: left;
+    margin-top: 20px;
+    display: none;
+  }
+  .title4.form-title {
+    margin-bottom: 10px;
+  }
+  .form-input-field {
+    width: 100% !important;
+    height: 40px;
+    color: #3d3d4e;
+  }
+  .list-filter {
+    top: 45px;
+    width: 100% !important;
+    z-index: 3;
+    height: fit-content;
+  }
+}

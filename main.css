@@ -35,6 +35,8 @@ h4 {
 
 a {
   color: var(--primary-0);
+  text-decoration: none;
+  font-weight: 600;
 }
 body {
   /* width: 100vw; */
@@ -450,6 +452,9 @@ header .nav-container {
   .sidenav {
     display: none;
   }
+  .category-group .fas.fa-bars#menu-icon-hidden {
+    display: none;
+  }
 }
 @media only screen and (max-width: 1310px) {
   .search-bar {
@@ -562,6 +567,9 @@ header .nav-container {
 }
 
 @media only screen and (max-width: 850px) {
+  .category-group .fas.fa-bars#menu-icon-hidden {
+    display: block;
+  }
   .sidenav {
     display: block;
   }
@@ -734,7 +742,14 @@ header .nav-container {
 
 @media only screen and (max-width: 760px) {
   header .navbar {
-    padding: 0px 12px;
+    padding: 0px 12px !important;
+  }
+  header .navbar .logo {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    font-family: OpenSans;
+    padding: 12px;
   }
 
   .banner {

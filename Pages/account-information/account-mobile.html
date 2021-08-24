@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOPLIST</title>
+
+    <link rel="stylesheet" href="../../main.css" />
+    <link rel="stylesheet" href="./account.css" />
+    <script
+      src="https://kit.fontawesome.com/8062565c7c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <script src="./script.js"></script>
+  </head>
+
+  <body onresize="onResizeWindow()" id="body">
+    <script src="../home/home.js"></script>
+
+    <!-- <header> -->
+    <div include-html="../common/header.html"></div>
+    <!-- </header> -->
+
+    <main>
+      <section>
+        <div class="banner">
+          <h2
+            style="
+              margin-top: 0px;
+              margin-bottom: 0px;
+              font-family: OpenSans;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 15px;
+            "
+          >
+            Hãy trở thành Chuyên gia của ABC ngay hôm nay!
+          </h2>
+          <button
+            class="primary-btn"
+            style="margin-left: 3%; margin-right: 0px"
+          >
+            Bắt đầu ngay
+          </button>
+        </div>
+        <div class="account-container">
+          <div class="account-content">
+            <div style="position: relative">
+              <button
+                class="select-box-mobile"
+                type="button"
+                data-toggle="dropdown"
+                onclick="showDropdownStatus()"
+              >
+                Thông tin cá nhân
+                <img src="../../Assets/images/chevron-down.png" />
+              </button>
+              <div id="list-status" class="list-filter">
+                <div
+                  class="filter-item tablinks"
+                  onclick="openTabMobile(event, 'information')"
+                >
+                  Thông tin cá nhân
+                </div>
+                <div
+                  class="filter-item tablinks"
+                  onclick="openTabMobile(event, 'settings')"
+                >
+                  Cài đặt tài khoản
+                </div>
+                <div
+                  class="filter-item tablinks"
+                  onclick="openTabMobile(event, 'change-password')"
+                >
+                  Đổi mật khẩu
+                </div>
+                <div
+                  class="filter-item tablinks"
+                  onclick="openTabMobile(event, 'manage-post')"
+                >
+                  Quản lý bài viết
+                </div>
+              </div>
+            </div>
+            <div
+              class="information-container"
+              style="display: flex; flex-direction: column"
+            >
+              <div class="avatar-container-bg">
+                <div class="avatar-container">
+                  <img
+                    src="../../Assets/images/avar-user.jpg"
+                    class="account-avatar"
+                  />
+                  <span class="edit-round-btn"
+                    ><i
+                      class="fas fa-pen"
+                      style="font-size: 11px; color: white"
+                    ></i
+                  ></span>
+                </div>
+              </div>
+              <p class="title2">Trần Thị Kim Thảo</p>
+
+              <form
+                action=""
+                method="get"
+                id="information"
+                class="form-account-mobile tabcontent"
+              >
+                <p class="title4 form-title">Tên</p>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-input-field name"
+                  value="Trần Thị Kim Thảo"
+                />
+
+                <p class="title4 form-title">Nơi ở</p>
+                <input
+                  type="text"
+                  id="city"
+                  name="city"
+                  value="Hồ Chí Minh"
+                  class="form-input-field city"
+                />
+
+                <p class="title4 form-title">Facebook</p>
+                <input
+                  type="text"
+                  id="facebook"
+                  name="facebook"
+                  value="facebook.com/kimthaotran99"
+                  class="form-input-field facebook"
+                />
+
+                <p class="title4 form-title">Instagram</p>
+                <input
+                  type="text"
+                  id="instagram"
+                  name="instagram"
+                  value="instagram.com/kimthaotran99"
+                  class="form-input-field instagram"
+                />
+
+                <p class="title4 form-title">Linkedin</p>
+                <input
+                  type="text"
+                  id="linkedin"
+                  name="linkedin"
+                  value="linkedin.com/kimthaotran99"
+                  class="form-input-field linkedin"
+                />
+
+                <button class="primary-btn form-submit-btn">
+                  Lưu thay đổi
+                </button>
+              </form>
+
+              <form
+                action=""
+                method="get"
+                id="settings"
+                class="form-account-mobile tabcontent"
+              >
+                <p class="title4 form-title">Tên đăng nhập</p>
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  class="form-input-field username"
+                  value="kimthao4435"
+                />
+
+                <p class="title4 form-title">Email</p>
+                <input
+                  type="text"
+                  id="email"
+                  name="email"
+                  value="kimthao4435@gmail.com"
+                  class="form-input-field email"
+                />
+
+                <button class="primary-btn form-submit-btn">
+                  Lưu thay đổi
+                </button>
+              </form>
+              <form
+                action=""
+                method="get"
+                id="change-password"
+                class="form-account-mobile tabcontent"
+              >
+                <p class="title4 form-title">Mật khẩu cũ</p>
+                <input
+                  type="password"
+                  id="old-password"
+                  name="old-password"
+                  class="form-input-field old-password"
+                  value="kimthao4435"
+                />
+
+                <p class="title4 form-title">Mật khẩu mới</p>
+                <input
+                  type="password"
+                  id="new-password"
+                  name="new-password"
+                  value="kimthao4435@gmail.com"
+                  class="form-input-field new-password"
+                />
+
+                <p class="title4 form-title">Xác nhận lại mật khẩu mới</p>
+                <input
+                  type="password"
+                  id="confirm-password"
+                  name="confirm-password"
+                  value="kimthao4435@gmail.com"
+                  class="form-input-field confirm-password"
+                />
+
+                <button class="primary-btn form-submit-btn">
+                  Đổi mật khẩu
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div include-html="../common/footer.html"></div>
+
+    <script>
+      includeHTML();
+      renderCalendar();
+    </script>
+  </body>
+</html>

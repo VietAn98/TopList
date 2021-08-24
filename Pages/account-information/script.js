@@ -130,3 +130,28 @@ function openTab(evt, tabName) {
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " selected";
 }
+
+function openTabMobile(evt, tabName) {
+  var i, tabcontent, tablinks;
+  //   if (tabName === "manage-post") {
+  //     document.getElementById("right-container-w-post").style.display = "block";
+  //     document.getElementById("right-container").style.display = "none";
+  //   } else {
+  //     document.getElementById("right-container").style.display = "block";
+  //     document.getElementById("right-container-w-post").style.display = "none";
+  //   }
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" selected", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  if (document.getElementById("list-status")) {
+    document.getElementById("list-status").style.display = "none";
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " selected";
+}

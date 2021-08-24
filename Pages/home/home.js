@@ -13,14 +13,12 @@ function logout() {
 function openNav() {
   document.getElementById("sideNavigate").style.width = "100%";
   document.getElementById("closebtn").style.display = "inline-block";
-  document.getElementById("menu-icon-hidden").style.display = "none";
   document.getElementById("body").style.overflowY = "hidden";
 }
 
 function closeNav() {
   document.getElementById("sideNavigate").style.width = "0";
   document.getElementById("closebtn").style.display = "none";
-  document.getElementById("menu-icon-hidden").style.display = "inline-block";
   document.getElementById("body").style.overflowY = "scroll";
 }
 
@@ -108,4 +106,8 @@ function onResizeWindow() {
     document.getElementById("closebtn").style.display = "none";
     document.getElementById("menu-icon-hidden").style.display = "none";
   }
+}
+
+function toLoginPage() {
+  location.assign("./login-mobile.html");
 }
