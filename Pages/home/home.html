@@ -5,14 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TOPLIST</title>
-
-    <link rel="stylesheet" href="../../main.css" />
-    <link rel="stylesheet" href="./home.css" />
     <script
       src="https://kit.fontawesome.com/8062565c7c.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="../../main.css" />
+    <link rel="stylesheet" href="./home.css" />
+
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
   </head>
 
   <body onresize="onResizeWindow()" id="body">
@@ -405,7 +406,11 @@
                     value="remember"
                   /><label for="vehicle1">Nhớ tài khoản</label>
                 </div>
-                <a href="#">Quên mật khẩu?</a>
+                <a
+                  href="#"
+                  onclick="document.getElementById('modal-forget-password').style.display='block'"
+                  >Quên mật khẩu?</a
+                >
               </div>
               <p>Hoặc</p>
 
