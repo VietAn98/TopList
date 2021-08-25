@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TOPLIST</title>
+
+  <link rel="stylesheet" href="../../main.css" />
+  <link rel="stylesheet" href="./news-detail.css" />
+  <script src="https://kit.fontawesome.com/8062565c7c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <script src="news-detail.js"></script>
+
+  <div include-html="../common/header.html"></div>
+
+  <main>
+    <section>
+      <div class="banner">
+        <h2 style="margin-top: 0px; margin-bottom: 0px">
+          Hãy trở thành Chuyên gia của ABC ngay hôm nay!
+        </h2>
+        <button class="primary-btn" style="margin-left: 3%; margin-right: 0px">
+          Bắt đầu ngay
+        </button>
+      </div>
+      <div class="news-detail-container">
+        <div class="news-detail-content">
+          <div class="news-detail">
+            <div class="news-detail-title">Tư vấn du học Mỹ từ các học sinh thực tế sống tại Mỹ</div>
+            <div class="small-information flex-row">
+              <div class="flex-row">
+                <div class="avatar-datetime flex-row">
+                  <img src="../../Assets/images/avatar-1.png" width="22" height="22" class="author-avatar" />
+                  <p class="figures">29/06/2021</p>
+                </div>
+                <div class="views flex-row">
+                  <i class="fas fa-eye sm-icon"></i>
+                  <p class="figures">435</p>
+                </div>
+                <div class="comments flex-row">
+                  <i class="fas fa-comment sm-icon"></i>
+                  <p class="figures">323</p>
+                </div>
+              </div>
+              <div class="btn-container">
+                <button class="fb-btn">
+                  <i class="fab fa-facebook-f"></i> Chia sẻ 97
+                </button>
+              </div>
+            </div>
+            <div class="news-detail-description">Website abc là nơi có thể giúp bạn kết nối được các chuyên gia và
+              chuyên viên có kinh nghiệm thực tế, hỗ trợ tư vấn du học mỹ hiệu quả với kinh nghiệm xương máu họ đã trải
+              qua....</div>
+            <div class="slim-devider" style="margin: 30px 0px;">
+            </div>
+            <div style="line-height: 22px;">Trước khi du học mỹ bạn sẽ có rất nhiều thắc mắc cần giải đáp như chi hồ sơ
+              nhập học, visa, chọn trường, chọn ngành học, học phí và các khoản chi phí sinh hoạt tại Mỹ... Đây là top
+              các bạn du học sinh có thể giải đáp các thắc mắc này cho bạn 1 cách ngọn ngành:</div>
+            <div class="news-detail-student-slider-container">
+              <div id="content" class="news-detail-student-slider flex-row">
+                <div include-html="./card-student.html"></div>
+                <div include-html="./card-student.html"></div>
+                <div include-html="./card-student.html"></div>
+                <div include-html="./card-student.html"></div>
+              </div>
+              <img class="horizon-prev" src="../../Assets/images/prev.png"/>
+              <img class="horizon-next" src="../../Assets/images/next.png"/>
+            </div>
+            <div class="news-detail-qa">
+              <div class="news-detail-qa-title">
+                Giải đáp tất cả thắc mắc về vấn đề du học ở Mỹ
+              </div>
+              <div class="news-detail-qa-content">
+                <div include-html="./news-detail-qa-item.html"></div>
+                <div include-html="./news-detail-qa-item.html"></div>
+                <div include-html="./news-detail-qa-item.html"></div>
+              </div>
+              <div style="line-height: 22px;">
+                Trên đó là những câu hỏi thắc mắc thường gặp cho những ai đang cần tư vấn du học mỹ. Hy vọng với chia sẻ
+                này của chuyengiatuvan đã giúp bạn giải đáp được khuất mắc và kết nối được đúng chuyên gia có thể hỗ trợ
+                bạn hoàn tất thủ tục thành công!
+              </div>
+            </div>
+            <div class="slim-devider" style="margin: 30px 0px;"></div>
+            <div class="news-detail-social">
+              <div class="news-detail-social-button btn-facebook">Chia sẻ lên Facebook</div>
+              <div class="news-detail-social-button btn-goolge">Chia sẻ lên Google</div>
+            </div>
+            <div class="news-detail-tags">
+              <div class="news-detail-tags-item">Giá rẻ</div>
+              <div class="news-detail-tags-item">Uy tín</div>
+              <div class="news-detail-tags-item">Nhanh chóng</div>
+            </div>
+            <div class="slim-devider" style="margin: 30px 0px"></div>
+            <div class="news-detail-comment">
+              <textarea type="text" class="news-detail-comment-input-box"
+                placeholder="Viết bình luận của bạn"></textarea>
+              <div class="news-detail-login-facebook-button btn-facebook">
+                <img src="../../Assets/images/facebook-white.png" style="margin-right: 5px;" />
+                Đăng nhập bằng Facebook
+              </div>
+              <div class="news-detail-comment-title">Bình luận</div>
+              <div class="news-detail-comment-content">
+                <div include-html="./news-detail-comment-item.html"></div>
+                <div include-html="./news-detail-comment-item.html"></div>
+              </div>
+            </div>
+          </div>
+          <div class="other-news">
+            <div>
+              <img style="border-radius: 20px;" src="../../Assets/images/thumnail-2.png" width="100%" height="100%" />
+            </div>
+            <div class="other-news-title">Bài viết liên quan</div>
+            <div include-html="./other-news-item.html"></div>
+            <div include-html="./other-news-item.html"></div>
+            <div include-html="./other-news-item.html"></div>
+            <div include-html="./other-news-item.html"></div>
+            <div include-html="./other-news-item.html"></div>
+            <div include-html="./other-news-item.html"></div>
+            <div include-html="./other-news-item.html"></div>
+            <div include-html="./other-news-item.html"></div>
+            <div include-html="./other-news-item.html"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="norms">
+        <div class="buttons">
+          <div class="first-btn first">Kinh nghiệm thực tế</div>
+          <div class="second-btn second">Tư vấn 1:1</div>
+          <div class="third-btn third">Uy tín</div>
+        </div>
+        <p style="
+              margin: 0px;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 16px;
+              line-height: 24px;
+              color: #3d3d4e;
+            ">
+          Đây là 3 tiêu chí mà ABC luôn muốn hướng tới để đem lại những thông
+          tin hữu ích cho cộng đồng
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <div include-html="../common/footer.html"></div>
+
+  <script>
+    includeHTML();
+  </script>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+    $('.horizon-prev').click(function () {
+      event.preventDefault();
+      console.log("prev");
+      $('#content').animate({
+        scrollLeft: "-=426px"
+      }, "slow");
+    });
+
+    $('.horizon-next').click(function () {
+      event.preventDefault();
+      console.log("next");
+
+      $('#content').animate({
+        scrollLeft: "+=426px"
+      }, "slow");
+    });
+  </script>
+</body>
+
+</html>

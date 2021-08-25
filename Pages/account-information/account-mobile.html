@@ -87,6 +87,7 @@
             <div
               class="information-container"
               style="display: flex; flex-direction: column"
+              id="information-container"
             >
               <div class="avatar-container-bg">
                 <div class="avatar-container">
@@ -225,6 +226,207 @@
                   Đổi mật khẩu
                 </button>
               </form>
+            </div>
+            <div class="user-post-container" id="user-post-container">
+              <div class="flex-row" style="justify-content: space-between">
+                <p class="title4" style="margin-bottom: 20px">
+                  Thông tin về các bài viết của bạn
+                </p>
+                <img
+                  src="../../Assets/images/filter.png"
+                  width="16"
+                  height="16"
+                  onclick="showFilter()"
+                />
+              </div>
+
+              <div class="post-card">
+                <div class="filter-container" id="filter-container">
+                  <div class="calendar-container">
+                    <button
+                      class="dropdown-toggle select-box"
+                      type="button"
+                      data-toggle="dropdown"
+                      onclick="showCalendar()"
+                    >
+                      Ngày post
+                      <img src="../../Assets/images/chevron-down.png" />
+                    </button>
+
+                    <div id="calendar" class="dropdown-calendar">
+                      <div class="calendar">
+                        <div class="month-year">
+                          <img
+                            src="../../Assets/images/chevron-left.png"
+                            class="prev"
+                          />
+
+                          <div class="flex-row" style="align-items: center">
+                            <div class="month" id="month"></div>
+                            <img
+                              src="../../Assets/images/arrow-down.png"
+                              width="8"
+                              height="8"
+                              style="margin-left: 20px"
+                            />
+                          </div>
+                          <div class="flex-row" style="align-items: center">
+                            <div class="year" id="year"></div>
+                            <img
+                              src="../../Assets/images/arrow-down.png"
+                              width="8"
+                              height="8"
+                              style="margin-left: 20px"
+                            />
+                          </div>
+                          <img
+                            src="../../Assets/images/chevron-right.png"
+                            class="next"
+                          />
+                        </div>
+                        <div class="weekdays">
+                          <div>T2</div>
+                          <div>T3</div>
+                          <div>T4</div>
+                          <div>T5</div>
+                          <div>T6</div>
+                          <div>T7</div>
+                          <div>CN</div>
+                        </div>
+                        <div class="days"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="status-container">
+                    <button
+                      class="dropdown-toggle select-box"
+                      type="button"
+                      data-toggle="dropdown"
+                      onclick="showDropdownStatus()"
+                    >
+                      Tình trạng
+                      <img src="../../Assets/images/chevron-down.png" />
+                    </button>
+                    <div id="list-status" class="list-filter">
+                      <div class="filter-item">Chờ duyệt</div>
+                      <div class="filter-item">Đã xuất bản</div>
+                    </div>
+                  </div>
+
+                  <div class="payment-container">
+                    <button
+                      class="dropdown-toggle select-box"
+                      type="button"
+                      data-toggle="dropdown"
+                      onclick="showDropdownPayment()"
+                    >
+                      Thanh toán
+                      <img src="../../Assets/images/chevron-down.png" />
+                    </button>
+                    <div id="list-payment" class="list-filter">
+                      <div class="filter-item">Chưa thanh toán</div>
+                      <div class="filter-item">Đã thanh toán</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="post-card-item">
+                  <p class="title4">
+                    logo.vn/các-quoc-gia-tot-nhat-de-du-hoc-nam...
+                  </p>
+                  <p class="body3" style="margin-top: 8px">
+                    Ngày đăng: 19/04/2021
+                  </p>
+                  <div
+                    class="flex-row"
+                    style="
+                      justify-content: space-between;
+                      align-items: center;
+                      margin-top: 17px;
+                    "
+                  >
+                    <span class="status-tag waiting">Chờ duyệt</span>
+                    <p class="body3">Chưa thanh toán</p>
+                  </div>
+                </div>
+                <div class="post-card-item">
+                  <p class="title4">
+                    logo.vn/các-quoc-gia-tot-nhat-de-du-hoc-nam...
+                  </p>
+                  <p class="body3" style="margin-top: 8px">
+                    Ngày đăng: 19/04/2021
+                  </p>
+                  <div
+                    class="flex-row"
+                    style="
+                      justify-content: space-between;
+                      align-items: center;
+                      margin-top: 17px;
+                    "
+                  >
+                    <span class="status-tag waiting">Chờ duyệt</span>
+                    <p class="body3">Chưa thanh toán</p>
+                  </div>
+                </div>
+                <div class="post-card-item">
+                  <p class="title4">
+                    logo.vn/các-quoc-gia-tot-nhat-de-du-hoc-nam...
+                  </p>
+                  <p class="body3" style="margin-top: 8px">
+                    Ngày đăng: 19/04/2021
+                  </p>
+                  <div
+                    class="flex-row"
+                    style="
+                      justify-content: space-between;
+                      align-items: center;
+                      margin-top: 17px;
+                    "
+                  >
+                    <span class="status-tag waiting">Chờ duyệt</span>
+                    <p class="body3">Chưa thanh toán</p>
+                  </div>
+                </div>
+                <div class="post-card-item">
+                  <p class="title4">
+                    logo.vn/các-quoc-gia-tot-nhat-de-du-hoc-nam...
+                  </p>
+                  <p class="body3" style="margin-top: 8px">
+                    Ngày đăng: 19/04/2021
+                  </p>
+                  <div
+                    class="flex-row"
+                    style="
+                      justify-content: space-between;
+                      align-items: center;
+                      margin-top: 17px;
+                    "
+                  >
+                    <span class="status-tag published">Chờ duyệt</span>
+                    <p class="body3">Chưa thanh toán</p>
+                  </div>
+                </div>
+                <div class="post-card-item">
+                  <p class="title4">
+                    logo.vn/các-quoc-gia-tot-nhat-de-du-hoc-nam...
+                  </p>
+                  <p class="body3" style="margin-top: 8px">
+                    Ngày đăng: 19/04/2021
+                  </p>
+                  <div
+                    class="flex-row"
+                    style="
+                      justify-content: space-between;
+                      align-items: center;
+                      margin-top: 17px;
+                    "
+                  >
+                    <span class="status-tag published">Chờ duyệt</span>
+                    <p class="body3">Chưa thanh toán</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

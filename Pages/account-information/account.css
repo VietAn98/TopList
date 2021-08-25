@@ -187,12 +187,14 @@
 .striped-table > tbody > tr:nth-of-type(odd) > td {
   background-color: white !important;
 }
-
 .status-tag {
   border-radius: 20px;
   width: 110px;
   height: 24px;
-  padding: 5px 20px;
+  /* padding: 5px 20px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .status-tag.waiting {
   background: #f7d4d0;
@@ -359,7 +361,6 @@
   .form-account-mobile {
     text-align: left;
     margin-top: 20px;
-    display: none;
   }
   .title4.form-title {
     margin-bottom: 10px;
@@ -375,4 +376,51 @@
     z-index: 3;
     height: fit-content;
   }
+
+  .calendar-container button,
+  .status-container button,
+  .payment-container button {
+    width: 100%;
+    margin: 20px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .calendar-container,
+  .status-container,
+  .payment-container {
+    padding: 0px 12px;
+  }
+  .payment-container {
+    margin-bottom: 20px;
+  }
+  .filter-container {
+    border-bottom: 0.5px solid #a9aab8;
+    display: none;
+  }
+}
+
+.post-card-item {
+  background-color: #f5fbf9;
+  padding: 26px 12px;
+}
+
+.post-card-item:nth-of-type(even) {
+  background-color: white;
+}
+.post-card-item:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  /* margin-top: 10px; */
+}
+
+.post-card {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: white;
+  padding-top: 1px;
+}
+
+.user-post-container {
+  display: none;
 }

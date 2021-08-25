@@ -4,7 +4,6 @@ const renderCalendar = () => {
   date.setDate(1);
 
   const monthDays = document.querySelector(".days");
-  console.log(monthDays);
 
   const lastDay = new Date(
     date.getFullYear(),
@@ -43,9 +42,12 @@ const renderCalendar = () => {
     "Tháng 12",
   ];
 
-  document.querySelector("#month").innerHTML = months[date.getMonth()];
-
-  document.querySelector("#year").innerHTML = new Date().getFullYear();
+  if (document.querySelector("#month")) {
+    document.querySelector("#month").innerHTML = months[date.getMonth()];
+  }
+  if (document.querySelector("#year")) {
+    document.querySelector("#year").innerHTML = new Date().getFullYear();
+  }
 
   let days = "";
 
@@ -133,13 +135,13 @@ function openTab(evt, tabName) {
 
 function openTabMobile(evt, tabName) {
   var i, tabcontent, tablinks;
-  //   if (tabName === "manage-post") {
-  //     document.getElementById("right-container-w-post").style.display = "block";
-  //     document.getElementById("right-container").style.display = "none";
-  //   } else {
-  //     document.getElementById("right-container").style.display = "block";
-  //     document.getElementById("right-container-w-post").style.display = "none";
-  //   }
+  if (tabName === "manage-post") {
+    document.getElementById("user-post-container").style.display = "block";
+    document.getElementById("information-container").style.display = "none";
+  } else {
+    document.getElementById("information-container").style.display = "block";
+    document.getElementById("user-post-container").style.display = "none";
+  }
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
@@ -148,10 +150,17 @@ function openTabMobile(evt, tabName) {
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" selected", "");
   }
-  document.getElementById(tabName).style.display = "block";
   if (document.getElementById("list-status")) {
     document.getElementById("list-status").style.display = "none";
   }
-  document.getElementById(tabName).style.display = "block";
+  if (document.getElementById(tabName)) {
+    document.getElementById(tabName).style.display = "block";
+  }
   evt.currentTarget.className += " selected";
+}
+
+function showFilter() {
+  if (document.getElementById("filter-container")) {
+    document.getElementById("filter-container").style.display = "block";
+  }
 }
