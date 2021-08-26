@@ -158,7 +158,7 @@
   margin-right: 12px;
 }
 .buttons .second-btn.second {
-  height: 38px !important;
+  height: 38px;
   background: #008cf1;
   border-radius: 10px;
 
@@ -176,7 +176,7 @@
   margin-right: 12px;
 }
 .buttons .third-btn.third {
-  height: 38px !important;
+  height: 38px;
   background: #49b3ff;
   border-radius: 10px;
 

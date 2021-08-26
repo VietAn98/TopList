@@ -1,107 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOPLIST</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TOPLIST</title>
+    <link rel="stylesheet" href="../../main.css" />
+    <link rel="stylesheet" href="./super-category.css" />
+    <script
+      src="https://kit.fontawesome.com/8062565c7c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-  <link rel="stylesheet" href="../../main.css" />
-  <link rel="stylesheet" href="./super-category.css" />
-  <script src="https://kit.fontawesome.com/8062565c7c.js" crossorigin="anonymous"></script>
-</head>
+  <body>
+    <script src="super-category.js"></script>
 
-<body>
-  <script src="super-category.js"></script>
+    <div include-html="../common/header.html"></div>
 
-  <div include-html="../common/header.html"></div>
-
-  <main>
-    <section>
-      <div class="banner">
-        <h2 style="margin-top: 0px; margin-bottom: 0px">
-          Hãy trở thành Chuyên gia của ABC ngay hôm nay!
-        </h2>
-        <button class="primary-btn" style="margin-left: 3%; margin-right: 0px">
-          Bắt đầu ngay
-        </button>
-      </div>
-      <div class="super-category-container">
-        <div class="super-category-content">
-          <div class="card-news">
-            <div class="card-news-title">Tư vấn chủ đề Du học (235 bài) trong (12 trang)</div>
-            <div class="divider"></div>
-            <div include-html="../common/card-news.html"></div>
-            <div include-html="../common/card-news.html"></div>
-            <div include-html="../common/card-news.html"></div>
-            <div include-html="../common/card-news.html"></div>
-            <div include-html="../common/card-news.html"></div>
-            <div include-html="../common/card-news.html"></div>
-            <div include-html="../common/card-news.html"></div>
-            <div include-html="../common/card-news.html"></div>
-            <div include-html="../common/card-news.html"></div>
-            <div include-html="../common/card-news.html"></div>
-            <div include-html="../common/card-news.html"></div>
-          </div>
-          <div class="topicThumbnail-orders-relativeTopics">
-            <div class="topicThumbnail">
-              <img src="../../Assets/images/thumnail-2.png" width="100%" alt="">
+    <main>
+      <section>
+        <div class="banner">
+          <h2 style="margin-top: 0px; margin-bottom: 0px">
+            Hãy trở thành Chuyên gia của ABC ngay hôm nay!
+          </h2>
+          <button
+            class="primary-btn"
+            style="margin-left: 3%; margin-right: 0px"
+          >
+            Bắt đầu ngay
+          </button>
+        </div>
+        <div class="super-category-container">
+          <div class="super-category-content">
+            <div class="card-news">
+              <div class="card-news-title">
+                Tư vấn chủ đề Du học (235 bài) trong (12 trang)
+              </div>
+              <div class="divider"></div>
+              <div include-html="../common/card-news.html"></div>
+              <div include-html="../common/card-news.html"></div>
+              <div include-html="../common/card-news.html"></div>
+              <div include-html="../common/card-news.html"></div>
+              <div include-html="../common/card-news.html"></div>
+              <div include-html="../common/card-news.html"></div>
+              <div include-html="../common/card-news.html"></div>
+              <div include-html="../common/card-news.html"></div>
+              <div include-html="../common/card-news.html"></div>
+              <div include-html="../common/card-news.html"></div>
+              <div include-html="../common/card-news.html"></div>
             </div>
-            <div class="ft-content">
-              <p class="ft-title ft-color-text">Sắp xếp</p>
-              <ul class="ft-list-ul">
-                <li>Mới nhất</li>
-                <li>Hot nhất</li>
-                <li>Liên quan nhất</li>
-              </ul>
-            </div>
-            <div class="ft-content">
-              <p class="ft-title ft-color-text">Chủ đề liên quan</p>
-              <ul class="ft-list-ul">
-                <li>Tư vấn du học Hàn Quốc</li>
-                <li>Tư vấn du học Đức</li>
-                <li>Tư vấn du học Đài Loan</li>
-                <li>Tư vấn du học Úc</li>
-                <li>Tư vấn du học Mỹ</li>
-                <li>Tư vấn du học Nhật</li>
-                <li>Tư vấn du học Pháp</li>
-                <li>Tư vấn du học Nga</li>
-                <li>Tư vấn du học Ý</li>
-                <li>Tư vấn du học Thuỵ Sĩ</li>
-              </ul>
+            <div class="topicThumbnail-orders-relativeTopics">
+              <div class="topicThumbnail">
+                <img
+                  src="../../Assets/images/thumnail-2.png"
+                  width="100%"
+                  alt=""
+                />
+              </div>
+              <div class="ft-content">
+                <p class="ft-title ft-color-text">Sắp xếp</p>
+                <ul class="ft-list-ul">
+                  <li
+                    onclick="location.assign('../super-category/super-category.html')"
+                  >
+                    Mới nhất
+                  </li>
+                  <li
+                    onclick="location.assign('../super-category/super-category.html')"
+                  >
+                    Hot nhất
+                  </li>
+                  <li
+                    onclick="location.assign('../super-category/super-category.html')"
+                  >
+                    Liên quan nhất
+                  </li>
+                </ul>
+              </div>
+              <div class="ft-content">
+                <p class="ft-title ft-color-text">Chủ đề liên quan</p>
+                <ul class="ft-list-ul">
+                  <li
+                    onclick="location.assign('../sub-category/sub-category.html')"
+                  >
+                    Tư vấn du học Hàn Quốc
+                  </li>
+                  <li
+                    onclick="location.assign('../sub-category/sub-category.html')"
+                  >
+                    Tư vấn du học Đức
+                  </li>
+                  <li
+                    onclick="location.assign('../sub-category/sub-category.html')"
+                  >
+                    Tư vấn du học Đài Loan
+                  </li>
+                  <li
+                    onclick="location.assign('../sub-category/sub-category.html')"
+                  >
+                    Tư vấn du học Úc
+                  </li>
+                  <li
+                    onclick="location.assign('../sub-category/sub-category.html')"
+                  >
+                    Tư vấn du học Mỹ
+                  </li>
+                  <li
+                    onclick="location.assign('../sub-category/sub-category.html')"
+                  >
+                    Tư vấn du học Nhật
+                  </li>
+                  <li
+                    onclick="location.assign('../sub-category/sub-category.html')"
+                  >
+                    Tư vấn du học Pháp
+                  </li>
+                  <li
+                    onclick="location.assign('../sub-category/sub-category.html')"
+                  >
+                    Tư vấn du học Nga
+                  </li>
+                  <li
+                    onclick="location.assign('../sub-category/sub-category.html')"
+                  >
+                    Tư vấn du học Ý
+                  </li>
+                  <li
+                    onclick="location.assign('../sub-category/sub-category.html')"
+                  >
+                    Tư vấn du học Thuỵ Sĩ
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div include-html="../common/pagination.html"></div>
+        <div include-html="../common/pagination.html"></div>
 
-      <div class="norms">
-        <div class="buttons">
-          <div class="first-btn first">Kinh nghiệm thực tế</div>
-          <div class="second-btn second">Tư vấn 1:1</div>
-          <div class="third-btn third">Uy tín</div>
-        </div>
-        <p style="
+        <div class="norms">
+          <div class="buttons">
+            <div class="first-btn first">Kinh nghiệm thực tế</div>
+            <div class="second-btn second">Tư vấn 1:1</div>
+            <div class="third-btn third">Uy tín</div>
+          </div>
+          <p
+            style="
               margin: 0px;
               font-style: normal;
               font-weight: normal;
               font-size: 16px;
               line-height: 24px;
               color: #3d3d4e;
-            ">
-          Đây là 3 tiêu chí mà ABC luôn muốn hướng tới để đem lại những thông
-          tin hữu ích cho cộng đồng
-        </p>
-      </div>
-    </section>
-  </main>
+            "
+          >
+            Đây là 3 tiêu chí mà ABC luôn muốn hướng tới để đem lại những thông
+            tin hữu ích cho cộng đồng
+          </p>
+        </div>
+        <div include-html="../common/modal.html"></div>
+      </section>
+    </main>
 
-  <div include-html="../common/footer.html"></div>
+    <div include-html="../common/footer.html"></div>
 
-  <script>
-    includeHTML();
-  </script>
-</body>
-
+    <script>
+      includeHTML();
+    </script>
+  </body>
 </html>

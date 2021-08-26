@@ -13,16 +13,8 @@
     <link rel="stylesheet" href="./home.css" />
   </head>
   <body style="background-color: white !important">
-    <header>
-      <nav class="navbar">
-        <div class="nav-container">
-          <div class="first-section-mobile">
-            <h1 class="logo">LOGO</h1>
-            <i class="fas fa-bars" id="menu-icon"></i>
-          </div>
-        </div>
-      </nav>
-    </header>
+    <script src="../common/script.js"></script>
+    <div include-html="../common/header.html"></div>
     <main>
       <section>
         <div class="login-page-container">
@@ -76,6 +68,9 @@
             </p>
           </div>
         </div>
+        <script>
+          includeHTML();
+        </script>
       </section>
     </main>
   </body>

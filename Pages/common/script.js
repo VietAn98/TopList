@@ -1,47 +1,25 @@
 function login() {
-  let register = document.getElementById("btnregister");
-  let btnlogin = document.getElementById("btnlogin");
-  let currentuser = document.getElementById("current-user");
-
-  if (register && btnlogin && currentuser) {
-    document.getElementById("btnregister").style.display = "none";
-    document.getElementById("btnlogin").style.display = "none";
-    document.getElementById("current-user").style.display = "flex";
-  }
+  document.getElementById("btnregister").style.display = "none";
+  document.getElementById("btnlogin").style.display = "none";
+  document.getElementById("current-user").style.display = "flex";
 }
 
 function logout() {
-  let register = document.getElementById("btnregister");
-  let btnlogin = document.getElementById("btnlogin");
-  let currentuser = document.getElementById("current-user");
-
-  if (register && btnlogin && currentuser) {
-    document.getElementById("btnregister").style.display = "block";
-    document.getElementById("btnlogin").style.display = "block";
-    document.getElementById("current-user").style.display = "none";
-  }
+  document.getElementById("btnregister").style.display = "block";
+  document.getElementById("btnlogin").style.display = "block";
+  document.getElementById("current-user").style.display = "none";
 }
 
 function openNav() {
-  let a = document.getElementById("sideNavigate");
-  let b = document.getElementById("closebtn");
-  let c = document.getElementById("body");
-  if ((a, b, c)) {
-    document.getElementById("sideNavigate").style.width = "100%";
-    document.getElementById("closebtn").style.display = "inline-block";
-    document.getElementById("body").style.overflowY = "hidden";
-  }
+  document.getElementById("sideNavigate").style.width = "100%";
+  document.getElementById("closebtn").style.display = "inline-block";
+  document.getElementById("body").style.overflowY = "hidden";
 }
 
 function closeNav() {
-  let a = document.getElementById("sideNavigate");
-  let b = document.getElementById("closebtn");
-  let c = document.getElementById("body");
-  if ((a, b, c)) {
-    document.getElementById("sideNavigate").style.width = "0";
-    document.getElementById("closebtn").style.display = "none";
-    document.getElementById("body").style.overflowY = "scroll";
-  }
+  document.getElementById("sideNavigate").style.width = "0";
+  document.getElementById("closebtn").style.display = "none";
+  document.getElementById("body").style.overflowY = "scroll";
 }
 
 var i = 0;
@@ -131,5 +109,21 @@ function onResizeWindow() {
 }
 
 function toLoginPage() {
-  location.assign("./login-mobile.html");
+  location.assign("../home/login-mobile.html");
+}
+
+function onClickForgetPass() {
+  document.getElementById("modal-forget-password").style.display = "block";
+  document.getElementById("modal-signup").style.display = "none";
+  document.getElementById("modal-signin").style.display = "none";
+}
+function onClickSignIn() {
+  document.getElementById("modal-forget-password").style.display = "none";
+  document.getElementById("modal-signup").style.display = "none";
+  document.getElementById("modal-signin").style.display = "block";
+}
+function onClickSignUp() {
+  document.getElementById("modal-forget-password").style.display = "none";
+  document.getElementById("modal-signup").style.display = "block";
+  document.getElementById("modal-signin").style.display = "none";
 }

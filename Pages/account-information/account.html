@@ -17,7 +17,7 @@
   </head>
 
   <body onresize="onResizeWindow()" id="body">
-    <script src="../home/home.js"></script>
+    <script src="../common/script.js"></script>
 
     <!-- <header> -->
     <div include-html="../common/header.html"></div>
@@ -57,7 +57,7 @@
 
               <div class="action-container">
                 <p
-                  class="title3 tablinks"
+                  class="title3 tablinks selected"
                   onclick="openTab(event, 'information')"
                 >
                   Thông tin cá nhân
@@ -131,7 +131,7 @@
                   value="linkedin.com/kimthaotran99"
                   class="form-input-field linkedin"
                 />
-
+                <br />
                 <button class="primary-btn form-submit-btn">
                   Lưu thay đổi
                 </button>
@@ -406,6 +406,7 @@
             </div>
           </div>
         </div>
+        <div include-html="../common/modal.html"></div>
       </section>
     </main>
 

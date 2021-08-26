@@ -315,6 +315,14 @@
   border-radius: 10px 10px 0px 0px;
 }
 
+#settings,
+#change-password {
+  display: none;
+}
+#information {
+  display: block;
+}
+
 @media only screen and (max-width: 960px) {
   .account-content {
     width: 100%;
@@ -323,6 +331,7 @@
     flex-direction: column;
   }
   .select-box-mobile {
+    cursor: pointer;
     border-color: transparent !important;
     background-color: white;
     width: 100% !important;
