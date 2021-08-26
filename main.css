@@ -573,7 +573,7 @@ header .nav-container {
 
 @media only screen and (max-width: 850px) {
   .category-group .fas.fa-bars#menu-icon-hidden {
-    display: block;
+    display: block !important;
   }
   .sidenav {
     display: block;

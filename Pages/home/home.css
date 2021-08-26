@@ -527,7 +527,7 @@
   }
 
   .category-group .fas.fa-bars#menu-icon-shown {
-    display: none;
+    display: none !important;
   }
   .category-group .fas.fa-bars#menu-icon-hidden {
     display: inline-block;
