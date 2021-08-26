@@ -89,14 +89,56 @@ if (document.querySelector(".next")) {
 
 renderCalendar();
 
+let calendarFlag = 0;
 function showCalendar() {
-  document.getElementById("calendar").classList.toggle("show");
+  calendarFlag += 1;
+  if (calendarFlag % 2 !== 0) {
+    document.getElementById("calendar").style.display = "block";
+  } else {
+    document.getElementById("calendar").style.display = "none";
+  }
+  document.getElementById("list-status-dropdown").style.display = "none";
+  document.getElementById("list-payment").style.display = "none";
+  document.getElementById("list-status").style.display = "none";
 }
+
+let PaymentFlag = 0;
 function showDropdownPayment() {
-  document.getElementById("list-payment").style.display = "block";
+  PaymentFlag += 1;
+  if (PaymentFlag % 2 !== 0) {
+    document.getElementById("list-payment").style.display = "block";
+  } else {
+    document.getElementById("list-payment").style.display = "none";
+  }
+  document.getElementById("list-status-dropdown").style.display = "none";
+  document.getElementById("calendar").style.display = "none";
+  document.getElementById("list-status").style.display = "none";
 }
+
+let StatusFlag = 0;
 function showDropdownStatus() {
-  document.getElementById("list-status").style.display = "block";
+  StatusFlag += 1;
+  if (StatusFlag % 2 !== 0) {
+    document.getElementById("list-status-dropdown").style.display = "block";
+  } else {
+    document.getElementById("list-status-dropdown").style.display = "none";
+  }
+  document.getElementById("list-payment").style.display = "none";
+  document.getElementById("calendar").style.display = "none";
+  document.getElementById("list-status").style.display = "none";
+}
+
+let ChoiceFlag = 0;
+function showDropdownChoice() {
+  ChoiceFlag += 1;
+  if (ChoiceFlag % 2 !== 0) {
+    document.getElementById("list-status").style.display = "block";
+  } else {
+    document.getElementById("list-status").style.display = "none";
+  }
+  document.getElementById("list-payment").style.display = "none";
+  document.getElementById("list-status-dropdown").style.display = "none";
+  document.getElementById("calendar").style.display = "none";
 }
 
 window.onclick = function (event) {

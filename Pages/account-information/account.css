@@ -214,6 +214,7 @@
   border-radius: 10px;
   display: none;
   position: absolute;
+  z-index: 10;
 }
 .dropdown-calendar.show {
   display: block;
@@ -399,6 +400,7 @@
   .status-container,
   .payment-container {
     padding: 0px 12px;
+    position: relative;
   }
   .payment-container {
     margin-bottom: 20px;
