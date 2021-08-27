@@ -1,3 +1,5 @@
+@import "../../main.css";
+
 .account-container {
   width: 100%;
   margin: auto;
@@ -434,4 +436,8 @@
 
 .user-post-container {
   display: none;
+}
+
+.pen-icon-edit{
+  font-size: 11px; color: white"
 }

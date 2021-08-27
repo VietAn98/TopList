@@ -1,49 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-</head>
-
-<body>
-  <div class="student-item">
-    <div class="student-avatarSummary">
-      <div class="student-avatar">
-        <img src="../../Assets/images/thumnail-2.png" height="70px" />
+  <body>
+    <div class="student-item">
+      <div class="student-avatarSummary">
+        <div class="student-avatar">
+          <img src="../../Assets/images/thumnail-2.png" height="70px" />
+        </div>
+        <div class="student-summary">
+          <div class="student-name">Nguyễn Trần Minh Nhật</div>
+          <div class="student-level">Du học sinh tại Mỹ (10 năm)</div>
+          <div include-html="./star-rate.html"></div>
+        </div>
       </div>
-      <div class="student-summary">
-        <div class="student-name">Nguyễn Trần Minh Nhật</div>
-        <div class="student-level">Du học sinh tại Mỹ (10 năm)</div>
-        <div include-html="./star-rate.html"></div>
+      <div class="mt-14">
+        <span class="student-summary-label">Giới thiệu:</span>Lorem Ipsum is
+        simply dummy text of the printing and typesetting industry. Lorem Ipsum
+        has been the industry's standard dummy text ever since...
       </div>
-    </div>
-    <div style="margin-top: 14px">
-      <span class="student-summary-label">Giới thiệu:</span>Lorem Ipsum is simply dummy text of the printing and
-      typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since...
-    </div>
-    <div style="margin-top: 4px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;">
-      <span class="student-summary-label">Kinh
-        nghiệm:</span>https://www.facebook.com/groups/asdasdasdasdabasdvaksdhjkashd
-    </div>
-    <div class="student-skill">
-      <div class="student-skill-label">
-        <div style="margin-top: 4px">Chuyên môn:</div>
-        <div style="margin-top: 4px">Training:</div>
-        <div style="margin-top: 4px">Thân thiện:</div>
+      <div class="ellipsis mt-4">
+        <span class="student-summary-label">Kinh nghiệm:</span
+        >https://www.facebook.com/groups/asdasdasdasdabasdvaksdhjkashd
       </div>
-      <div class="student-skill-value">
-        <div include-html="./line-rate.html"></div>
-        <div include-html="./line-rate.html"></div>
-        <div include-html="./line-rate.html"></div>
+      <div class="student-skill">
+        <div class="student-skill-label">
+          <div class="mt-4">Chuyên môn:</div>
+          <div class="mt-4">Training:</div>
+          <div class="mt-4">Thân thiện:</div>
+        </div>
+        <div class="student-skill-value">
+          <div include-html="./line-rate.html"></div>
+          <div include-html="./line-rate.html"></div>
+          <div include-html="./line-rate.html"></div>
+        </div>
       </div>
     </div>
-  </div>
-</body>
-
+  </body>
 </html>

@@ -1,11 +1,13 @@
 @font-face {
   font-family: OpenSans;
   src: url("../Assets/fonts/OpenSans-Regular.ttf");
+  font-weight: normal;
 }
 
 @font-face {
   font-family: OpenSans-SemiBold;
   src: url("../Assets/fonts/OpenSans-SemiBold.ttf");
+  font-weight: normal;
 }
 
 :root {
@@ -300,6 +302,14 @@ header .nav-container {
   margin: 0px;
   color: var(--black-1);
 }
+.title3-a {
+  font-family: OpenSans-SemiBold;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  margin: 0px;
+  color: var(--black-2);
+}
 .title4 {
   font-family: OpenSans-SemiBold;
   font-style: normal;
@@ -357,10 +367,6 @@ header .nav-container {
 }
 .c-pointer {
   cursor: pointer;
-}
-.align-items-center {
-  display: flex;
-  align-items: center;
 }
 
 .figures {
@@ -750,6 +756,21 @@ header .nav-container {
   width: 90%;
 }
 
+.figure-style {
+  height: 32px;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+
+.banner-text {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: OpenSans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+}
+
 @media only screen and (max-width: 760px) {
   header .navbar {
     padding: 0px 12px !important;
@@ -836,4 +857,186 @@ header .nav-container {
   .btn-container {
     width: 100%;
   }
+}
+
+.mg-0 {
+  margin: 0px;
+}
+.mr-0 {
+  margin-right: 0px;
+}
+.mt-0 {
+  margin-top: 0px;
+}
+.ml-0 {
+  margin-left: 0px;
+}
+.mb-0 {
+  margin-bottom: 0px;
+}
+.ml-3per {
+  margin-left: 3%;
+}
+
+.mt-4 {
+  margin-top: 4px;
+}
+
+.mr-5 {
+  margin-top: 5px;
+}
+
+.mt-6 {
+  margin-top: 6px;
+}
+
+.mt-8 {
+  margin-top: 8px;
+}
+
+.mt-12 {
+  margin-top: 12px;
+}
+
+.mt-14 {
+  margin-top: 14px;
+}
+
+.mt-16 {
+  margin-top: 16px;
+}
+
+.mt-17 {
+  margin-top: 17px;
+}
+
+.mt-18 {
+  margin-top: 18px;
+}
+.mb-18 {
+  margin-bottom: 18px;
+}
+
+.mr-20 {
+  margin-right: 20px;
+}
+.ml-20 {
+  margin-left: 20px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.pd-0 {
+  padding: 0px;
+}
+.pdl-0 {
+  padding-left: 0px;
+}
+.pdr-0 {
+  padding-right: 0px;
+}
+.pdt-0 {
+  padding-top: 0px;
+}
+.pdb-0 {
+  padding-bottom: 0px;
+}
+
+.pdr-12 {
+  padding-right: 12px;
+}
+.pdl-12 {
+  padding-left: 12px;
+}
+
+.pdr-15 {
+  padding-right: 15px;
+}
+
+.fontsize-26 {
+  font-size: 26px;
+}
+.fontsize-12 {
+  font-size: 12px;
+}
+
+.quote-text {
+  margin: 0px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--black-2);
+}
+
+.color-primary-0 {
+  color: var(--primary-0);
+}
+
+.color-black-2 {
+  color: var(--black-2);
+}
+
+.align-items-center {
+  display: flex;
+  align-items: center;
+}
+.justify-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.w-100per {
+  width: 100%;
+}
+.w-90per {
+  width: 90%;
+}
+.w-50per {
+  width: 50%;
+}
+
+.underline-text {
+  text-decoration: underline;
+}
+
+.pos-relative {
+  position: relative;
+}
+
+.radius-50 {
+  border-radius: 50%;
+}
+.radius-20px {
+  border-radius: 20px;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fweight-60 {
+  font-weight: 600;
+}
+
+.line-height-22 {
+  line-height: 22px;
 }
