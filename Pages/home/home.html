@@ -14,346 +14,263 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
   </head>
 
-  <body onresize="onResizeWindow()" id="body">
+  <body id="body">
     <script src="home.js"></script>
+    <!-- <script src="../common/script.js"></script> -->
 
-    <!-- <header> -->
     <div include-html="../common/header.html"></div>
-    <!-- <div include-html="../common/side-nav.html"></div> -->
-    <!-- </header> -->
-
     <main>
       <section>
         <div class="banner">
-          <h2 class="mg-0 fontsize-26">
+          <h2 class="mg-0 fontsize-26 fweight-normal">
             Hãy trở thành Chuyên gia của ABC ngay hôm nay!
           </h2>
           <button class="primary-btn ml-3per mr-0">Bắt đầu ngay</button>
         </div>
-        <div class="homepage-container">
-          <div class="homepage-content">
-            <div class="card-news">
-              <div include-html="../common/card-news.html"></div>
-              <div include-html="../common/card-news.html"></div>
-              <div include-html="../common/card-news.html"></div>
-              <div include-html="../common/card-news.html"></div>
-              <div include-html="../common/card-news.html"></div>
-              <div include-html="../common/card-news.html"></div>
-              <div include-html="../common/card-news.html"></div>
-              <div include-html="../common/card-news.html"></div>
-              <div include-html="../common/card-news.html"></div>
-              <div include-html="../common/card-news.html"></div>
-              <div include-html="../common/card-news.html"></div>
+
+        <div class="content-container">
+          <div class="half-left-container">
+            <div include-html="../common/card-news.html"></div>
+            <div include-html="../common/card-news.html"></div>
+            <div include-html="../common/card-news.html"></div>
+            <div include-html="../common/card-news.html"></div>
+            <div include-html="../common/card-news.html"></div>
+          </div>
+          <div class="half-right-container">
+            <div class="w-100per flex-row gap-30">
+              <div class="tag-col">
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Du học</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Kinh doanh</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Mua bán nhà đất</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Kiểm tra xe</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Luật</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Bất động sản</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Tài chính</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Làm đẹp</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Học tập</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Dịch vụ</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Công nghệ</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Cuộc sống</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Năng khiếu</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >SEO</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Content</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >IT</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Design</span
+                >
+                <div class="divider"></div>
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Hà Nội</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Việt Nam</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Thế giới</span
+                >
+                <div class="divider"></div>
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Giá rẻ</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Chi phí thấp</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Hiệu quả</span
+                >
+              </div>
+              <div class="author-col">
+                <p class="title1">Top tác giả tháng</p>
+                <div class="top-authors mt-18">
+                  <div class="body1">Tác giả</div>
+                  <div class="body1">Số bài viết</div>
+                </div>
+                <div class="top-authors mt-18">
+                  <div class="author-name-container flex-row">
+                    <img
+                      src="../../Assets/images/avatar-author.png"
+                      class="avatar-author"
+                      alt="avatar-author"
+                    />
+                    <p
+                      class="p-black1 c-pointer ml-12"
+                      onclick="location.assign('../author/author.html')"
+                    >
+                      Huỳnh Kim Ngọc
+                    </p>
+                  </div>
+                  <p class="p-black2">23</p>
+                </div>
+                <div class="top-authors mt-18">
+                  <div class="author-name-container flex-row">
+                    <img
+                      src="../../Assets/images/avatar-author.png"
+                      class="avatar-author"
+                      alt="avatar-author"
+                    />
+                    <p
+                      class="p-black1 c-pointer ml-12"
+                      onclick="location.assign('../author/author.html')"
+                    >
+                      Huỳnh Kim Ngọc
+                    </p>
+                  </div>
+                  <p class="p-black2">23</p>
+                </div>
+                <div class="top-authors mt-18">
+                  <div class="author-name-container flex-row">
+                    <img
+                      src="../../Assets/images/avatar-author.png"
+                      class="avatar-author"
+                      alt="avatar-author"
+                    />
+                    <p
+                      class="p-black1 c-pointer ml-12"
+                      onclick="location.assign('../author/author.html')"
+                    >
+                      Huỳnh Kim Ngọc
+                    </p>
+                  </div>
+                  <p class="p-black2">23</p>
+                </div>
+                <div class="top-authors mt-18">
+                  <div class="author-name-container flex-row">
+                    <img
+                      src="../../Assets/images/avatar-author.png"
+                      class="avatar-author"
+                      alt="avatar-author"
+                    />
+                    <p
+                      class="p-black1 c-pointer ml-12"
+                      onclick="location.assign('../author/author.html')"
+                    >
+                      Huỳnh Kim Ngọc
+                    </p>
+                  </div>
+                  <p class="p-black2">23</p>
+                </div>
+                <div class="top-authors mt-18">
+                  <div class="author-name-container flex-row">
+                    <img
+                      src="../../Assets/images/avatar-author.png"
+                      class="avatar-author"
+                      alt="avatar-author"
+                    />
+                    <p
+                      class="p-black1 c-pointer ml-12"
+                      onclick="location.assign('../author/author.html')"
+                    >
+                      Huỳnh Kim Ngọc
+                    </p>
+                  </div>
+                  <p class="p-black2">23</p>
+                </div>
+                <div class="top-authors mt-18">
+                  <div class="author-name-container flex-row">
+                    <img
+                      src="../../Assets/images/avatar-author.png"
+                      class="avatar-author"
+                      alt="avatar-author"
+                    />
+                    <p
+                      class="p-black1 c-pointer ml-12"
+                      onclick="location.assign('../author/author.html')"
+                    >
+                      Huỳnh Kim Ngọc
+                    </p>
+                  </div>
+                  <p class="p-black2">23</p>
+                </div>
+              </div>
             </div>
-            <div class="tags-authors-otherNews">
-              <div class="tags-authors">
-                <div class="tags">
-                  <div class="pdr-15">
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Du học</span
-                    >
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Kinh doanh</span
-                    >
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Mua bán nhà đất</span
-                    >
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Kiểm tra xe</span
-                    >
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Luật</span
-                    >
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Bất động sản</span
-                    >
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Tài chính</span
-                    >
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Làm đẹp</span
-                    >
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Học tập</span
-                    >
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Dịch vụ</span
-                    >
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Công nghệ</span
-                    >
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Cuộc sống</span
-                    >
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Năng khiếu</span
-                    >
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >SEO</span
-                    >
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Content</span
-                    >
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >IT</span
-                    >
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Design</span
-                    >
-                    <div class="divider"></div>
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Hà Nội</span
-                    >
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Việt Nam</span
-                    >
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Thế giới</span
-                    >
-                    <div class="divider"></div>
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Giá rẻ</span
-                    >
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Chi phí thấp</span
-                    >
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Hiệu quả</span
-                    >
-                  </div>
-                </div>
-                <div class="authors">
-                  <div class="title">
-                    <p class="title1">Top tác giả tháng</p>
-                  </div>
-                  <div class="top-authors-container">
-                    <div class="authors-name">
-                      <p class="body1">Tác giả</p>
-                      <div class="author-name-container flex-row">
-                        <img
-                          src="../../Assets/images/avatar-author.png"
-                          class="avatar-author"
-                          alt="avatar-author"
-                        />
-                        <p
-                          class="p-black1 c-pointer"
-                          onclick="location.assign('../author/author.html')"
-                        >
-                          Huỳnh Kim Ngọc
-                        </p>
-                      </div>
-                      <div class="author-name-container flex-row">
-                        <img
-                          src="../../Assets/images/avatar-author.png"
-                          class="avatar-author"
-                          alt="avatar-author"
-                        />
-                        <p
-                          class="p-black1 c-pointer"
-                          onclick="location.assign('../author/author.html')"
-                        >
-                          Huỳnh Kim Ngọc
-                        </p>
-                      </div>
-                      <div class="author-name-container flex-row">
-                        <img
-                          src="../../Assets/images/avatar-author.png"
-                          class="avatar-author"
-                          alt="avatar-author"
-                        />
-                        <p
-                          class="p-black1 c-pointer"
-                          onclick="location.assign('../author/author.html')"
-                        >
-                          Huỳnh Kim Ngọc
-                        </p>
-                      </div>
-                      <div class="author-name-container flex-row">
-                        <img
-                          src="../../Assets/images/avatar-author.png"
-                          class="avatar-author"
-                          alt="avatar-author"
-                        />
-                        <p
-                          class="p-black1 c-pointer"
-                          onclick="location.assign('../author/author.html')"
-                        >
-                          Huỳnh Kim Ngọc
-                        </p>
-                      </div>
-                      <div class="author-name-container flex-row">
-                        <img
-                          src="../../Assets/images/avatar-author.png"
-                          class="avatar-author"
-                          alt="avatar-author"
-                        />
-                        <p
-                          class="p-black1 c-pointer"
-                          onclick="location.assign('../author/author.html')"
-                        >
-                          Huỳnh Kim Ngọc
-                        </p>
-                      </div>
-                      <div class="author-name-container flex-row">
-                        <img
-                          src="../../Assets/images/avatar-author.png"
-                          class="avatar-author"
-                          alt="avatar-author"
-                        />
-                        <p
-                          class="p-black1 c-pointer"
-                          onclick="location.assign('../author/author.html')"
-                        >
-                          Huỳnh Kim Ngọc
-                        </p>
-                      </div>
-                      <div class="author-name-container flex-row">
-                        <img
-                          src="../../Assets/images/avatar-author.png"
-                          class="avatar-author"
-                          alt="avatar-author"
-                        />
-                        <p
-                          class="p-black1 c-pointer"
-                          onclick="location.assign('../author/author.html')"
-                        >
-                          Huỳnh Kim Ngọc
-                        </p>
-                      </div>
-                      <div class="author-name-container flex-row">
-                        <img
-                          src="../../Assets/images/avatar-author.png"
-                          class="avatar-author"
-                          alt="avatar-author"
-                        />
-                        <p
-                          class="p-black1 c-pointer"
-                          onclick="location.assign('../author/author.html')"
-                        >
-                          Huỳnh Kim Ngọc
-                        </p>
-                      </div>
-                      <div class="author-name-container flex-row">
-                        <img
-                          src="../../Assets/images/avatar-author.png"
-                          class="avatar-author"
-                          alt="avatar-author"
-                        />
-                        <p
-                          class="p-black1 c-pointer"
-                          onclick="location.assign('../author/author.html')"
-                        >
-                          Huỳnh Kim Ngọc
-                        </p>
-                      </div>
-                      <div class="author-name-container flex-row">
-                        <img
-                          src="../../Assets/images/avatar-author.png"
-                          class="avatar-author"
-                          alt="avatar-author"
-                        />
-                        <p
-                          class="p-black1 c-pointer"
-                          onclick="location.assign('../author/author.html')"
-                        >
-                          Huỳnh Kim Ngọc
-                        </p>
-                      </div>
-                    </div>
-                    <div class="figures">
-                      <p class="body1">Số bài viết</p>
-                      <div class="align-items-center figure-style">
-                        <p class="p-black2">23</p>
-                      </div>
-                      <div class="align-items-center figure-style">
-                        <p class="p-black2">23</p>
-                      </div>
-                      <div class="align-items-center figure-style">
-                        <p class="p-black2">23</p>
-                      </div>
-                      <div class="align-items-center figure-style">
-                        <p class="p-black2">23</p>
-                      </div>
-                      <div class="align-items-center figure-style">
-                        <p class="p-black2">23</p>
-                      </div>
-                      <div class="align-items-center figure-style">
-                        <p class="p-black2">23</p>
-                      </div>
-                      <div class="align-items-center figure-style">
-                        <p class="p-black2">23</p>
-                      </div>
-                      <div class="align-items-center figure-style">
-                        <p class="p-black2">23</p>
-                      </div>
-                      <div class="align-items-center figure-style">
-                        <p class="p-black2">23</p>
-                      </div>
-                      <div class="align-items-center figure-style">
-                        <p class="p-black2">23</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="other-news">
-                <div include-html="../common/card-news.html"></div>
-                <div include-html="../common/card-news.html"></div>
-                <div include-html="../common/card-news.html"></div>
-                <div include-html="../common/card-news.html"></div>
-                <div include-html="../common/card-news.html"></div>
-              </div>
+            <div class="w-100per">
+              <div include-html="../common/card-news.html"></div>
+              <div include-html="../common/card-news.html"></div>
+              <div include-html="../common/card-news.html"></div>
+              <div include-html="../common/card-news.html"></div>
+              <div include-html="../common/card-news.html"></div>
             </div>
           </div>
         </div>
         <div include-html="../common/pagination.html"></div>
-
         <div class="norms">
           <div class="buttons">
             <div class="first-btn first">Kinh nghiệm thực tế</div>
@@ -369,7 +286,6 @@
         <div include-html="../common/modal.html"></div>
       </section>
     </main>
-
     <div include-html="../common/footer.html"></div>
 
     <script>

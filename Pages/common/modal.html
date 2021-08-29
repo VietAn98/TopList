@@ -26,21 +26,21 @@
           <form action="" method="get">
             <input
               type="email"
-              id="email"
+              id="signup-email"
               name="email"
               placeholder="Email"
               class="form-input-field email"
             />
             <input
               type="text"
-              id="username"
+              id="signup-username"
               name="username"
               placeholder="Tên đăng nhập"
               class="form-input-field username"
             />
             <input
               type="password"
-              id="password"
+              id="signup-password"
               name="password"
               placeholder="Mật khẩu"
               class="form-input-field password"
@@ -48,18 +48,18 @@
 
             <button class="primary-btn form-submit-btn">Đăng ký</button>
           </form>
-          <p>
+          <p class="mt-16">
             Đăng ký là bạn đồng ý với
             <a href="javascript:void(0)">Điều khoản</a> của chúng tôi.
           </p>
-          <p>Hoặc</p>
+          <p class="mt-20 mb-20">Hoặc</p>
 
           <button class="outline-btn-2 w-100per">
             <img src="../../Assets/images/google.png" class="mr-20" />Đăng nhập
             bằng Google
           </button>
 
-          <p>
+          <p class="mt-20">
             Bạn đã có tài khoản?
             <a href="javascript:void(0)" onclick="onClickSignIn()">Đăng nhập</a>
           </p>
@@ -87,16 +87,13 @@
             />
             <input
               type="password"
-              id="password"
-              name="password"
+              id="signin-password"
+              name="signin-password"
               placeholder="Mật khẩu"
               class="form-input-field password"
             />
           </form>
-          <button
-            class="primary-btn form-submit-btn"
-            onclick="location.assign('../account-information/account.html')"
-          >
+          <button class="primary-btn form-submit-btn" onclick="login()">
             Đăng nhập
           </button>
           <div class="flex-row justify-space-between mt-17">
@@ -112,14 +109,14 @@
               >Quên mật khẩu?</a
             >
           </div>
-          <p>Hoặc</p>
+          <p class="mt-20 mb-20">Hoặc</p>
 
           <button class="outline-btn-2 w-100per">
             <img src="../../Assets/images/google.png" class="mr-20" />Đăng nhập
             bằng Google
           </button>
 
-          <p>
+          <p class="mt-20">
             Bạn chưa có tài khoản?
             <a href="javascript:void(0)" onclick="onClickSignUp()">Đăng kí</a>
           </p>
@@ -137,7 +134,7 @@
         <div class="modal-content-container">
           <h3 class="title1 mb-30">Quên mật khẩu</h3>
 
-          <p>
+          <p class="mb-16">
             Vui lòng nhập Email bạn đã đăng ký với chúng tôi, chúng tôi sẽ gửi
             link thiết lập lại mật khẩu cho bạn.
           </p>

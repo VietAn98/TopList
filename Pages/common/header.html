@@ -10,382 +10,397 @@
   <body>
     <script src="./script.js"></script>
     <header>
-      <nav class="navbar">
-        <div class="nav-container">
-          <div class="first-section">
-            <h1 class="logo" onclick="location.assign('../home/home.html')">
-              LOGO
-            </h1>
-
-            <div id="sideNavigate" class="sidenav">
-              <div class="head-logo">
-                <h1 class="logo">LOGO</h1>
-                <i class="fas fa-times" id="closebtn" onclick="closeNav()"></i>
-              </div>
-              <div class="sidenav-container">
-                <div class="search-container-mobile">
-                  <div class="search-bar-mobile input-icon">
-                    <i class="fas fa-search icon"></i>
-                    <input
-                      type="search"
-                      id="search"
-                      name="search"
-                      placeholder="Tìm kiếm"
-                      class="input-field"
-                    />
-                  </div>
-                </div>
-
-                <div class="menu-dropdown mobile" onclick="onClickCategories()">
-                  <p>Danh mục</p>
-
-                  <i
-                    class="fas fa-chevron-down"
-                    id="category-fa-chevron-down"
-                  ></i>
-                  <i class="fas fa-chevron-up" id="category-fa-chevron-up"></i>
-                </div>
-                <div id="list-tags">
-                  <div class="pdr-12 pdl-12">
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Du học</span
-                    >
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Kinh doanh</span
-                    >
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Mua bán nhà đất</span
-                    >
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Kiểm tra xe</span
-                    >
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Luật</span
-                    >
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Bất động sản</span
-                    >
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Tài chính</span
-                    >
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Làm đẹp</span
-                    >
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Học tập</span
-                    >
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Dịch vụ</span
-                    >
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Công nghệ</span
-                    >
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Cuộc sống</span
-                    >
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Năng khiếu</span
-                    >
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >SEO</span
-                    >
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Content</span
-                    >
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >IT</span
-                    >
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Design</span
-                    >
-                    <div class="divider"></div>
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Hà Nội</span
-                    >
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Việt Nam</span
-                    >
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Thế giới</span
-                    >
-                    <div class="divider"></div>
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Giá rẻ</span
-                    >
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Chi phí thấp</span
-                    >
-                    <span
-                      class="categories-tags"
-                      onclick="location.assign('../super-category/super-category.html')"
-                      >Hiệu quả</span
-                    >
-                  </div>
-                </div>
-                <div
-                  class="language-dropdown mobile"
-                  onclick="onClickLanguage()"
-                >
-                  <p>Tiếng Việt</p>
-
-                  <i
-                    class="fas fa-chevron-down"
-                    id="language-fa-chevron-down"
-                  ></i>
-                  <i class="fas fa-chevron-up" id="language-fa-chevron-up"></i>
-                </div>
-                <div id="list-language">
-                  <div class="language-item active">
-                    <i class="fas fa-check"></i> Tiếng Việt
-                  </div>
-                  <div class="language-item">
-                    <i class="fas fa-check"></i> English
-                  </div>
-                </div>
-                <div class="w-90per">
-                  <div class="gray-divider"></div>
-                </div>
-
-                <div class="mt-30 pdr-12 pdl-12">
-                  <button
-                    onclick="toLoginPage()"
-                    id="btnlogin"
-                    class="primary-btn"
-                  >
-                    Đăng nhập
-                  </button>
-                  <button
-                    id="btnregister"
-                    class="outline-btn"
-                    onclick="location.assign('../home/signup-mobile.html')"
-                  >
-                    Đăng ký
-                  </button>
-                </div>
-
-                <div
-                  class="current-user-mobile"
-                  id="current-user-mobile"
-                  onclick="onClickUserInfo()"
-                >
-                  <div class="user">
-                    <span class="wrap-avatar">
-                      <img
-                        class="user-avatar"
-                        src="../../Assets/images/avar-user.jpg"
-                      />
-                    </span>
-                    <span class="text-name">Huỳnh Kim Ngọc</span>
-                  </div>
-                  <span class="icon-down">
-                    <i
-                      class="fas fa-chevron-down"
-                      id="user-fa-chevron-down"
-                    ></i>
-                    <i class="fas fa-chevron-up" id="user-fa-chevron-up"></i>
-                  </span>
-                </div>
-                <div
-                  class="user-dropdown-content-mobile"
-                  id="user-dropdown-content-mobile"
-                >
-                  <div
-                    class="user-option c-pointer"
-                    onclick="location.assign('../account-information/account-mobile.html')"
-                  >
-                    Thông tin cá nhân
-                  </div>
-                  <div
-                    class="user-option c-pointer"
-                    onclick="location.assign('../account-information/account-mobile.html')"
-                  >
-                    Cài đặt tài khoản
-                  </div>
-                  <div
-                    class="user-option c-pointer"
-                    onclick="location.assign('../account-information/account-mobile.html')"
-                  >
-                    Đổi mật khẩu
-                  </div>
-                  <div
-                    class="gray-divider"
-                    onclick="location.assign('../account-information/account-mobile.html')"
-                  ></div>
-                  <div
-                    class="user-option mg-15 c-pointer"
-                    onclick="location.assign('../account-information/account-mobile.html')"
-                  >
-                    Quản lý bài đăng
-                  </div>
-                  <div class="gray-divider c-pointer"></div>
-                  <div onclick="logout()" class="user-option">Đăng xuất</div>
-                </div>
+      <nav class="header-container">
+        <div id="sideNavigate" class="sidenav">
+          <div class="head-logo">
+            <a href="../home/home.html" class="logo">LOGO</a>
+            <i
+              class="fas fa-times"
+              id="closebtn"
+              onclick="document.getElementById('sideNavigate').style.width = '0';
+            document.getElementById('closebtn').style.display = 'none';"
+            ></i>
+          </div>
+          <div class="sidenav-container">
+            <div class="search-container-mobile">
+              <div class="search-bar-mobile input-icon">
+                <i class="fas fa-search icon"></i>
+                <input
+                  type="search"
+                  id="search"
+                  name="search"
+                  placeholder="Tìm kiếm"
+                  class="input-field"
+                />
               </div>
             </div>
-            <div class="category-group">
-              <div class="dropdown">
-                <i class="fas fa-bars" id="menu-icon-shown"></i>
-                <i
-                  class="fas fa-bars"
-                  id="menu-icon-hidden"
-                  onclick="openNav()"
-                ></i>
-                <div class="dropdown-content">
-                  <span
-                    class="categories-tags"
-                    onclick="location.assign('../super-category/super-category.html')"
-                    >Mới nhất</span
-                  >
-                  <div class="divider"></div>
-                  <span
-                    class="categories-tags"
-                    onclick="location.assign('../super-category/super-category.html')"
-                    >Mới nhất</span
-                  >
-                  <div class="divider"></div>
-                  <span
-                    class="categories-tags"
-                    onclick="location.assign('../super-category/super-category.html')"
-                    >Mới nhất</span
-                  >
-                </div>
-              </div>
+
+            <div class="menu-dropdown mobile" onclick="onClickCategories()">
               <p>Danh mục</p>
+
+              <i class="fas fa-chevron-down" id="category-fa-chevron-down"></i>
+              <i class="fas fa-chevron-up" id="category-fa-chevron-up"></i>
             </div>
-            <div class="search-bar input-icon">
-              <i class="fas fa-search icon"></i>
-              <input
-                type="search"
-                id="search"
-                name="search"
-                placeholder="Tìm kiếm"
-                class="input-field"
-              />
+            <div id="list-tags">
+              <div class="pdr-12 pdl-12">
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Du học</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Kinh doanh</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Mua bán nhà đất</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Kiểm tra xe</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Luật</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Bất động sản</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Tài chính</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Làm đẹp</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Học tập</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Dịch vụ</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Công nghệ</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Cuộc sống</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Năng khiếu</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >SEO</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Content</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >IT</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Design</span
+                >
+                <div class="divider"></div>
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Hà Nội</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Việt Nam</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Thế giới</span
+                >
+                <div class="divider"></div>
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Giá rẻ</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Chi phí thấp</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Hiệu quả</span
+                >
+              </div>
+            </div>
+            <div class="language-dropdown mobile" onclick="onClickLanguage()">
+              <p>Tiếng Việt</p>
+
+              <i class="fas fa-chevron-down" id="language-fa-chevron-down"></i>
+              <i class="fas fa-chevron-up" id="language-fa-chevron-up"></i>
+            </div>
+            <div id="list-language">
+              <div class="language-item active">
+                <i class="fas fa-check"></i> Tiếng Việt
+              </div>
+              <div class="language-item">
+                <i class="fas fa-check"></i> English
+              </div>
+            </div>
+            <div class="w-90per">
+              <div class="gray-divider"></div>
+            </div>
+
+            <div class="mt-30 pdr-12 pdl-12">
+              <button
+                onclick="document.getElementById('modal-signin').style.display='block';document.getElementById('sideNavigate').style.width = '0%';"
+                id="btnlogin"
+                class="primary-btn"
+              >
+                Đăng nhập
+              </button>
+              <button
+                id="btnregister"
+                class="outline-btn"
+                onclick="document.getElementById('modal-signup').style.display='block';document.getElementById('sideNavigate').style.width = '0%';"
+              >
+                Đăng ký
+              </button>
+            </div>
+
+            <div
+              class="current-user-mobile"
+              id="current-user-mobile"
+              onclick="onClickUserInfo()"
+            >
+              <div class="user">
+                <span class="wrap-avatar">
+                  <img
+                    class="user-avatar"
+                    src="../../Assets/images/avar-user.jpg"
+                  />
+                </span>
+                <span class="text-name">Huỳnh Kim Ngọc</span>
+              </div>
+              <span class="icon-down">
+                <i class="fas fa-chevron-down" id="user-fa-chevron-down"></i>
+                <i class="fas fa-chevron-up" id="user-fa-chevron-up"></i>
+              </span>
+            </div>
+            <div
+              class="user-dropdown-content-mobile"
+              id="user-dropdown-content-mobile"
+            >
+              <div
+                class="user-option c-pointer"
+                onclick="location.assign('../account-information/account-mobile.html')"
+              >
+                Thông tin cá nhân
+              </div>
+              <div
+                class="user-option c-pointer"
+                onclick="location.assign('../account-information/account-mobile.html')"
+              >
+                Cài đặt tài khoản
+              </div>
+              <div
+                class="user-option c-pointer"
+                onclick="location.assign('../account-information/account-mobile.html')"
+              >
+                Đổi mật khẩu
+              </div>
+              <div
+                class="gray-divider"
+                onclick="location.assign('../account-information/account-mobile.html')"
+              ></div>
+              <div
+                class="user-option mg-15 c-pointer"
+                onclick="location.assign('../account-information/account-mobile.html')"
+              >
+                Quản lý bài đăng
+              </div>
+              <div class="gray-divider c-pointer"></div>
+              <div onclick="logout()" class="user-option">Đăng xuất</div>
             </div>
           </div>
-          <div class="separate"></div>
-          <div class="second-section">
-            <div class="language">
-              <img
-                src="../../Assets/images/globe.png"
-                width="26"
-                class="i-globe"
-                alt="globe"
-              />
-              <div class="dropdown">
-                <div class="language-dropdown-content">
-                  <div class="language-option">Tiếng Việt</div>
-                  <div class="language-option">English</div>
-                </div>
-                <div class="language-dropdown">
-                  <p>VI</p>
-                  <i class="fas fa-chevron-down"></i>
-                </div>
+        </div>
+        <div class="logo-category-search">
+          <a href="../home/home.html" class="logo">LOGO</a>
+          <i
+            class="fas fa-bars"
+            id="menu-icon-hidden"
+            onclick=" document.getElementById('sideNavigate').style.width = '100%';
+            document.getElementById('closebtn').style.display = 'inline-block';"
+          ></i>
+          <div class="category">
+            <div class="dropdown">
+              <i class="fas fa-bars" id="menu-icon-shown"></i>
+              <div class="dropdown-content">
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Mới nhất</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Mới nhất</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Mới nhất</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Mới nhất</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Mới nhất</span
+                >
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Mới nhất</span
+                >
+                <div class="divider"></div>
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Mới nhất</span
+                >
+                <div class="divider"></div>
+                <span
+                  class="categories-tags"
+                  onclick="location.assign('../super-category/super-category.html')"
+                  >Mới nhất</span
+                >
               </div>
             </div>
+            <p>Danh mục</p>
+          </div>
 
-            <button
-              id="btnlogin"
-              class="primary-btn"
-              onclick="document.getElementById('modal-signin').style.display='block'"
-            >
-              Đăng nhập
-            </button>
+          <div class="search-bar input-icon">
+            <i class="fas fa-search icon"></i>
+            <input
+              type="search"
+              id="search"
+              name="search"
+              placeholder="Tìm kiếm"
+              class="input-field"
+            />
+          </div>
+        </div>
 
-            <button
-              id="btnregister"
-              class="outline-btn"
-              onclick="document.getElementById('modal-signup').style.display='block'"
-            >
-              Đăng ký
-            </button>
-            <div class="current-user" id="current-user">
-              <span class="wrap-avatar">
-                <img
-                  class="user-avatar"
-                  src="../../Assets/images/avar-user.jpg"
-                />
-              </span>
-              <span class="text-name">Huỳnh Kim Ngọc</span>
-              <span class="icon-down">
+        <div class="language-signin-signup">
+          <div class="language">
+            <img
+              src="../../Assets/images/globe.png"
+              width="26"
+              class="i-globe"
+              alt="globe"
+            />
+            <div class="dropdown">
+              <div class="language-dropdown-content">
+                <div class="language-option">Tiếng Việt</div>
+                <div class="language-option">English</div>
+              </div>
+              <div class="language-dropdown">
+                <p>VI</p>
                 <i class="fas fa-chevron-down"></i>
-              </span>
-              <div class="user-dropdown-content">
-                <div class="user-option c-pointer">
-                  <a href="../account-information/account.html"
-                    >Thông tin cá nhân</a
-                  >
-                </div>
-                <div
-                  class="user-option c-pointer"
-                  onclick="location.assign('../account-information/account-mobile.html')"
+              </div>
+            </div>
+          </div>
+
+          <button
+            id="btnlogin"
+            class="primary-btn"
+            onclick="document.getElementById('modal-signin').style.display='block'"
+          >
+            Đăng nhập
+          </button>
+
+          <button
+            id="btnregister"
+            class="outline-btn"
+            onclick="document.getElementById('modal-signup').style.display='block'"
+          >
+            Đăng ký
+          </button>
+          <div class="current-user" id="current-user">
+            <span class="wrap-avatar">
+              <img
+                class="user-avatar"
+                src="../../Assets/images/avar-user.jpg"
+              />
+            </span>
+            <span class="text-name">Huỳnh Kim Ngọc</span>
+            <span class="icon-down">
+              <i class="fas fa-chevron-down"></i>
+            </span>
+            <div class="user-dropdown-content">
+              <div class="user-option c-pointer">
+                <a href="../account-information/account.html"
+                  >Thông tin cá nhân</a
                 >
-                  Cài đặt tài khoản
-                </div>
-                <div
-                  class="user-option c-pointer"
-                  onclick="location.assign('../account-information/account-mobile.html')"
-                >
-                  Đổi mật khẩu
-                </div>
-                <div
-                  class="space-line-option"
-                  onclick="location.assign('../account-information/account-mobile.html')"
-                ></div>
-                <div
-                  class="user-option c-pointer"
-                  onclick="location.assign('../account-information/account-mobile.html')"
-                >
-                  Quản lý bài đăng
-                </div>
-                <div class="space-line-option"></div>
-                <div onclick="logout()" class="user-option c-pointer">
-                  Đăng xuất
-                </div>
+              </div>
+              <div
+                class="user-option c-pointer"
+                onclick="location.assign('../account-information/account-mobile.html')"
+              >
+                Cài đặt tài khoản
+              </div>
+              <div
+                class="user-option c-pointer"
+                onclick="location.assign('../account-information/account-mobile.html')"
+              >
+                Đổi mật khẩu
+              </div>
+              <div
+                class="space-line-option"
+                onclick="location.assign('../account-information/account-mobile.html')"
+              ></div>
+              <div
+                class="user-option c-pointer"
+                onclick="location.assign('../account-information/account-mobile.html')"
+              >
+                Quản lý bài đăng
+              </div>
+              <div class="space-line-option"></div>
+              <div onclick="logout()" class="user-option c-pointer">
+                Đăng xuất
               </div>
             </div>
           </div>

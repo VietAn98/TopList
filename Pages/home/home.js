@@ -22,17 +22,6 @@ function logout() {
   }
 }
 
-function openNav() {
-  let a = document.getElementById("sideNavigate");
-  let b = document.getElementById("closebtn");
-  let c = document.getElementById("body");
-  if ((a, b, c)) {
-    document.getElementById("sideNavigate").style.width = "100%";
-    document.getElementById("closebtn").style.display = "inline-block";
-    document.getElementById("body").style.overflowY = "hidden";
-  }
-}
-
 function closeNav() {
   let a = document.getElementById("sideNavigate");
   let b = document.getElementById("closebtn");

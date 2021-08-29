@@ -10,18 +10,6 @@ function logout() {
   document.getElementById("current-user").style.display = "none";
 }
 
-function openNav() {
-  document.getElementById("sideNavigate").style.width = "100%";
-  document.getElementById("closebtn").style.display = "inline-block";
-  document.getElementById("body").style.overflowY = "hidden";
-}
-
-function closeNav() {
-  document.getElementById("sideNavigate").style.width = "0";
-  document.getElementById("closebtn").style.display = "none";
-  document.getElementById("body").style.overflowY = "scroll";
-}
-
 var i = 0;
 function onClickCategories() {
   i = i += 1;
@@ -126,4 +114,10 @@ function onClickSignUp() {
   document.getElementById("modal-forget-password").style.display = "none";
   document.getElementById("modal-signup").style.display = "block";
   document.getElementById("modal-signin").style.display = "none";
+}
+
+function loginDesktop() {
+  document.getElementById("current-user").style.display = "flex";
+  document.getElementById("btnregister").style.display = "none";
+  document.getElementById("btnlogin").style.display = "none";
 }
