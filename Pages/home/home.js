@@ -122,3 +122,7 @@ function onResizeWindow() {
 function toLoginPage() {
   location.assign("./login-mobile.html");
 }
+function handleClose() {
+  document.getElementById("sideNavigate").style.width = "0";
+  document.getElementById("closebtn").style.display = "none";
+}

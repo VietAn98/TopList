@@ -116,8 +116,30 @@ function onClickSignUp() {
   document.getElementById("modal-signin").style.display = "none";
 }
 
-function loginDesktop() {
-  document.getElementById("current-user").style.display = "flex";
-  document.getElementById("btnregister").style.display = "none";
-  document.getElementById("btnlogin").style.display = "none";
+function showModalSignIn() {
+  document.getElementById("modal-signin").style.display = "block";
+  document.getElementById("modal-signup").style.display = "none";
+  document.getElementById("sideNavigate").style.width = "0%";
+}
+
+function showModalSignUp() {
+  document.getElementById("modal-signup").style.display = "block";
+  document.getElementById("modal-signin").style.display = "none";
+  document.getElementById("sideNavigate").style.width = "0%";
+}
+
+function showSideNav() {
+  document.getElementById("sideNavigate").style.width = "100%";
+  document.getElementById("closebtn").style.display = "inline-block";
+}
+
+function handleClose() {
+  document.getElementById("sideNavigate").style.width = "0";
+  document.getElementById("closebtn").style.display = "none";
+}
+
+function handleCloseModal() {
+  document.getElementById("modal-forget-password").style.display = "none";
+  document.getElementById("modal-signup").style.display = "none";
+  document.getElementById("modal-signin").style.display = "none";
 }

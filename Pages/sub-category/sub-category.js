@@ -49,3 +49,7 @@ function includeHTML() {
     }
   }
 }
+function handleClose() {
+  document.getElementById("sideNavigate").style.width = "0";
+  document.getElementById("closebtn").style.display = "none";
+}
