@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
   </head>
   <body>
-    <script src="./script.js"></script>
+    <script src="../../main.js"></script>
 
     <div id="modal-signup" class="w3-modal">
       <div class="modal-content w3-animate-top">
@@ -21,7 +21,7 @@
           >&times;</span
         >
         <div class="modal-content-container">
-          <h3 class="title1 mb-30">Đăng ký</h3>
+          <h3 class="title1 mb-30 mt-30">Đăng ký</h3>
 
           <form action="" method="get">
             <input
@@ -48,7 +48,7 @@
 
             <button class="primary-btn form-submit-btn">Đăng ký</button>
           </form>
-          <p class="mt-16">
+          <p class="mt-16 modal-note">
             Đăng ký là bạn đồng ý với
             <a href="javascript:void(0)">Điều khoản</a> của chúng tôi.
           </p>
@@ -75,7 +75,7 @@
           >&times;</span
         >
         <div class="modal-content-container">
-          <h3 class="title1 mb-30">Đăng nhập</h3>
+          <h3 class="title1 mb-30 mt-30">Đăng nhập</h3>
 
           <form action="" method="get">
             <input
@@ -132,9 +132,9 @@
           >&times;</span
         >
         <div class="modal-content-container">
-          <h3 class="title1 mb-30">Quên mật khẩu</h3>
+          <h3 class="title1 mb-30 mt-30">Quên mật khẩu</h3>
 
-          <p class="mb-16">
+          <p class="mb-16 modal-note">
             Vui lòng nhập Email bạn đã đăng ký với chúng tôi, chúng tôi sẽ gửi
             link thiết lập lại mật khẩu cho bạn.
           </p>
@@ -149,7 +149,7 @@
           </form>
           <button
             class="primary-btn form-submit-btn"
-            onclick="location.assign('../home/reset-password.html')"
+            onclick="toPage('../home/reset-password.html')"
           >
             Gửi
           </button>
