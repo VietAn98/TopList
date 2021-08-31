@@ -1432,9 +1432,9 @@ a.title2.c-pointer {
   }
 }
 @media only screen and (max-width: 1090px) {
-  /* .news-information .news-description {
+  .news-information .news-description {
     display: none;
-  } */
+  }
   .btn-container .fb-btn {
     margin-left: 0px;
   }
@@ -1936,6 +1936,7 @@ sub-category, super-categor
   .third-btn.mobile {
     width: 65px !important;
     height: 20px !important;
+    font-size: 12px;
   }
 }
 
