@@ -33,11 +33,8 @@ function closeNav() {
   }
 }
 
-var i = 0;
 function onClickCategories() {
-  i = i += 1;
-  if (i % 2 === 0) {
-    //down
+  if (document.getElementById("list-tags").style.display === "block") {
     document.getElementById("list-tags").style.display = "none";
     document.getElementById("category-fa-chevron-up").style.display = "none";
     document.getElementById("category-fa-chevron-down").style.display = "block";
@@ -49,24 +46,24 @@ function onClickCategories() {
   }
 }
 
-var p = 0;
 function onClickLanguage() {
-  p = p += 1;
-  if (p % 2 === 0) {
+  if (document.getElementById("list-language").style.display === "block") {
     document.getElementById("list-language").style.display = "none";
     document.getElementById("language-fa-chevron-up").style.display = "none";
     document.getElementById("language-fa-chevron-down").style.display = "block";
   } else {
+    //up
     document.getElementById("list-language").style.display = "block";
     document.getElementById("language-fa-chevron-up").style.display = "block";
     document.getElementById("language-fa-chevron-down").style.display = "none";
   }
 }
 
-var k = 0;
 function onClickUserInfo() {
-  k = k += 1;
-  if (k % 2 === 0) {
+  if (
+    document.getElementById("user-dropdown-content-mobile").style.display ===
+    "block"
+  ) {
     document.getElementById("user-dropdown-content-mobile").style.display =
       "none";
     document.getElementById("user-fa-chevron-up").style.display = "none";
@@ -171,6 +168,9 @@ function showModalSignUp() {
 function showSideNav() {
   document.getElementById("sideNavigate").style.width = "100%";
   document.getElementById("closebtn").style.display = "inline-block";
+  document.getElementById("modal-forget-password").style.display = "none";
+  document.getElementById("modal-signup").style.display = "none";
+  document.getElementById("modal-signin").style.display = "none";
 }
 
 function handleClose() {
