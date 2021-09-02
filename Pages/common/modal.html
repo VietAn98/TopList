@@ -13,8 +13,12 @@
   <body>
     <script src="../../main.js"></script>
 
-    <div id="modal-signup" class="w3-modal">
-      <div class="modal-content w3-animate-top">
+    <div
+      id="modal-signup"
+      class="w3-modal"
+      onclick="onClickOutside('modal-signup')"
+    >
+      <div id="modal-signup-content" class="modal-content w3-animate-top">
         <span
           onclick="handleCloseModal()"
           class="modal-close-button w3-display-topright"
@@ -67,7 +71,11 @@
       </div>
     </div>
 
-    <div id="modal-signin" class="w3-modal">
+    <div
+      id="modal-signin"
+      class="w3-modal"
+      onclick="onClickOutside('modal-signin')"
+    >
       <div class="modal-content w3-animate-top">
         <span
           onclick="handleCloseModal()"
@@ -124,7 +132,11 @@
       </div>
     </div>
 
-    <div id="modal-forget-password" class="w3-modal">
+    <div
+      id="modal-forget-password"
+      class="w3-modal"
+      onclick="onClickOutside('modal-forget-password')"
+    >
       <div class="modal-content w3-animate-top">
         <span
           onclick="handleCloseModal()"

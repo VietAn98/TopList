@@ -281,20 +281,34 @@
                               class="prev"
                             />
 
-                            <div class="flex-row align-items-center">
+                            <div
+                              class="flex-row align-items-center c-pointer"
+                              onclick="handleClickShowMonths('desktop')"
+                            >
                               <div class="month" id="month"></div>
                               <img
                                 src="../../Assets/images/arrow-down.png"
                                 class="ml-20 img-8px"
                               />
                             </div>
-                            <div class="flex-row align-items-center">
+                            <div
+                              id="dropdown-month"
+                              class="dropdown-month"
+                            ></div>
+                            <div
+                              class="flex-row align-items-center"
+                              onclick="handleClickShowYears('desktop')"
+                            >
                               <div class="year" id="year"></div>
                               <img
                                 src="../../Assets/images/arrow-down.png"
                                 class="ml-20 img-8px"
                               />
                             </div>
+                            <div
+                              id="dropdown-years"
+                              class="dropdown-years"
+                            ></div>
                             <img
                               src="../../Assets/images/chevron-right.png"
                               class="next"
@@ -706,20 +720,34 @@
                               class="prev"
                             />
 
-                            <div class="flex-row align-items-center">
+                            <div
+                              class="flex-row align-items-center c-pointer"
+                              onclick="handleClickShowMonths('mobile')"
+                            >
                               <div class="month" id="month-mobile"></div>
                               <img
                                 src="../../Assets/images/arrow-down.png"
                                 class="ml-20 img-8px"
                               />
                             </div>
-                            <div class="flex-row align-items-center">
+                            <div
+                              id="dropdown-month-mobile"
+                              class="dropdown-month"
+                            ></div>
+                            <div
+                              class="flex-row align-items-center"
+                              onclick="handleClickShowYears('mobile')"
+                            >
                               <div class="year" id="year-mobile"></div>
                               <img
                                 src="../../Assets/images/arrow-down.png"
                                 class="ml-20 img-8px"
                               />
                             </div>
+                            <div
+                              id="dropdown-years-mobile"
+                              class="dropdown-years"
+                            ></div>
                             <img
                               src="../../Assets/images/chevron-right.png"
                               class="next"
