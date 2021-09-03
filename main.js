@@ -412,7 +412,6 @@ function onClickYear(id, i) {
 }
 function onClickDate(text) {
   var cell_values = document.getElementsByClassName("cell-value");
-  var cells = document.querySelector(".cell");
 
   for (var e = 0; e < cell_values.length - 1; e++) {
     cell_values[e].parentElement.classList.remove("active");
@@ -425,7 +424,20 @@ function onClickDate(text) {
   var month = document.querySelector("#month").innerText;
   var year = document.querySelector("#year").innerText;
   var container = document.querySelector("#calendar-value");
+  var container_mobile = document.querySelector("#calendar-value-mobile");
   container.innerHTML =
+    "<span>" +
+    date +
+    "/" +
+    month.replaceAll("Tháng ", "") +
+    "/" +
+    year +
+    "</span>" +
+    ` <img
+    src="../../Assets/images/chevron-down.png"
+    class="margin-image"
+  />`;
+  container_mobile.innerHTML =
     "<span>" +
     date +
     "/" +
