@@ -348,29 +348,113 @@ function onClickMonth(id, i) {
   for (var k = 0; k < list.length - 1; k++) {
     list[k].classList.remove("current-month");
   }
+  let selected_month;
   if (document.getElementById(`${id}-${i + 1}`)) {
     document.getElementById(`${id}-${i + 1}`).classList.add("current-month");
     document.getElementById("dropdown-month").style.display = "none";
-    console.log(document.getElementById("dropdown-month").style.display);
     document.getElementById("dropdown-month-mobile").style.display = "none";
-    document.querySelector("#month").innerHTML = months[i];
-    document.querySelector("#month-mobile").innerHTML = months[i];
+    document.querySelector("#month").innerHTML =
+      months[i] +
+      `<img
+    src="../../Assets/images/arrow-down.png"
+    class="ml-12 img-8px"
+  />`;
+    document.querySelector("#month-mobile").innerHTML =
+      months[i] +
+      `<img
+    src="../../Assets/images/arrow-down.png"
+    class="ml-12 img-8px"
+  />`;
   }
+  var t = new Calendar({
+    RenderID: ".render-a",
+    Format: "M",
+  });
+  t.Calendar(
+    parseInt(document.querySelector("#year").innerText),
+    parseInt(months[i].replaceAll("Tháng ", "")) - 1
+  );
 }
+
 function onClickYear(id, i) {
   let list = document.getElementsByClassName("year-item");
   for (var k = 0; k < list.length - 1; k++) {
     list[k].classList.remove("current-year");
   }
   if (document.getElementById(`${id}-${i + 1}`)) {
+    // date.setFullYear(years[i]);
     document.getElementById(`${id}-${i + 1}`).classList.add("current-year");
     document.getElementById("dropdown-years").style.display = "none";
     document.getElementById("dropdown-years-mobile").style.display = "none";
-    document.querySelector("#year").innerHTML = years[i];
-    document.querySelector("#year-mobile").innerHTML = years[i];
+    document.querySelector("#year").innerHTML =
+      years[i] +
+      `<img
+    src="../../Assets/images/arrow-down.png"
+    class="ml-12 img-8px"
+  />`;
+    document.querySelector("#year-mobile").innerHTML =
+      years[i] +
+      `<img
+    src="../../Assets/images/arrow-down.png"
+    class="ml-12 img-8px"
+  />`;
+    var t = new Calendar({
+      RenderID: ".render-a",
+      Format: "M",
+    });
+    t.Calendar(
+      years[i],
+      parseInt(
+        document.querySelector("#month").innerText.replaceAll("Tháng ", "")
+      ) - 1
+    );
   }
 }
+function onClickDate(text) {
+  var cell_values = document.getElementsByClassName("cell-value");
+  var cells = document.querySelector(".cell");
+
+  for (var e = 0; e < cell_values.length - 1; e++) {
+    cell_values[e].parentElement.classList.remove("active");
+  }
+  if (cell_values && cell_values.length !== 0) {
+    cell_values[text - 1].parentElement.classList.add("active");
+  }
+
+  var date = cell_values[text - 1].innerText;
+  var month = document.querySelector("#month").innerText;
+  var year = document.querySelector("#year").innerText;
+  var container = document.querySelector("#calendar-value");
+  container.innerHTML =
+    "<span>" +
+    date +
+    "/" +
+    month.replaceAll("Tháng ", "") +
+    "/" +
+    year +
+    "</span>" +
+    ` <img
+    src="../../Assets/images/chevron-down.png"
+    class="margin-image"
+  />`;
+  document.getElementById("calendar").style.display = "none";
+}
+
 function handleClickShowMonths(type) {
+  let eachMonth = "";
+  var current_month = document.querySelector("#month").innerText;
+  for (var i = 0; i < months.length; i++) {
+    if (current_month == months[i]) {
+      eachMonth += `<div class="month-item current-month" id=month-${
+        i + 1
+      } onclick={onClickMonth('month',${i})}>${months[i]}</div>`;
+    } else
+      eachMonth += `<div class="month-item" id=month-${
+        i + 1
+      } onclick={onClickMonth('month',${i})}>${months[i]}</div>`;
+  }
+  document.querySelector("#dropdown-month").innerHTML = eachMonth;
+
   if (type === "desktop") {
     if (
       document.getElementById("dropdown-month") &&
@@ -400,6 +484,28 @@ function handleClickShowMonths(type) {
   }
 }
 function handleClickShowYears(type) {
+  let startYear = 2020;
+  let endYearIncrement = 3;
+  let currentYear = new Date().getFullYear();
+  for (let i = 0; i <= currentYear - startYear + endYearIncrement; i++)
+    years.push(startYear + i);
+  let eachYear = "";
+  years = Array.from(new Set(years));
+  if (document.querySelector("#year")) {
+    currentYear = document.querySelector("#year").innerText;
+
+    for (var i = 0; i < years.length; i++) {
+      if (currentYear == years[i]) {
+        eachYear += `<div class="year-item current-year" id=year-${
+          i + 1
+        } onclick={onClickYear('year',${i})}>${years[i]}</div>`;
+      } else
+        eachYear += `<div class="year-item" id=year-${
+          i + 1
+        } onclick={onClickYear('year',${i})}>${years[i]}</div>`;
+    }
+    document.querySelector("#dropdown-years").innerHTML = eachYear;
+  }
   if (type === "desktop") {
     if (
       document.getElementById("dropdown-years") &&
@@ -427,24 +533,29 @@ function handleClickShowYears(type) {
   }
 }
 
-if (document.querySelector(".prev")) {
-  document.querySelector(".prev").addEventListener("click", () => {
-    date.setMonth(date.getMonth() - 1);
-    renderCalendar();
-  });
+function onClickPrev() {
+  date.setMonth(date.getMonth() - 1);
+  // // console.log(date.setMonth());
+  // if (date.getMonth() === 0) {
+  //   date.setFullYear(date.getFullYear() - 1);
+  // }
+  console.log(date.setFullYear(date.getFullYear() - 1));
+  // date.setFullYear(date.setFullYear() - 1);
+  // renderCalendar();
 }
-if (document.querySelector(".next")) {
-  document.querySelector(".next").addEventListener("click", () => {
-    date.setMonth(date.getMonth() + 1);
-    renderCalendar();
-  });
+
+function onClickNext() {
+  date.setMonth(date.getMonth() + 1);
+  console.log(date.getMonth() + 1);
+  // date.setFullYear(date.setFullYear() + 1);
+  renderCalendar();
 }
 
 renderCalendar();
 
 function showDropdownChoice() {
   document.getElementById("calendar").style.display = "none";
-  document.getElementById("calendar-mobile").style.display = "none";
+  // document.getElementById("calendar-mobile").style.display = "none";
   document.getElementById("list-payment").style.display = "none";
   document.getElementById("list-payment-mobile").style.display = "none";
   document.getElementById("list-status-dropdown-mobile").style.display = "none";
@@ -474,11 +585,11 @@ function showSelect(data) {
 
   if (data !== "calendar") {
     document.getElementById("calendar").style.display = "none";
-    document.getElementById("calendar-mobile").style.display = "none";
+    // document.getElementById("calendar-mobile").style.display = "none";
     document.getElementById("dropdown-years").style.display = "none";
-    document.getElementById("dropdown-years-mobile").style.display = "none";
+    // document.getElementById("dropdown-years-mobile").style.display = "none";
     document.getElementById("dropdown-month").style.display = "none";
-    document.getElementById("dropdown-month-mobile").style.display = "none";
+    // document.getElementById("dropdown-month-mobile").style.display = "none";
   }
   if (data !== "list-payment") {
     document.getElementById("list-payment").style.display = "none";
@@ -490,19 +601,50 @@ function showSelect(data) {
     document.getElementById("list-status-dropdown").style.display = "none";
   }
 
-  if (
-    document.getElementById(data).style.display !== "block" &&
-    document.getElementById(data + "-mobile").style.display !== "block"
-  ) {
-    document.getElementById(data).style.display = "block";
-    document.getElementById(data + "-mobile").style.display = "block";
+  var parentPos = document
+    .querySelector(".calendar-container")
+    .getBoundingClientRect();
+  console.log(parentPos);
+  if (data === "calendar") {
+    if (document.getElementById(data).style.display === "block") {
+      document.getElementById(data).style.display = "none";
+    } else {
+      // document.querySelector("#calendar").style.top =
+      //   "-" + (parentPos.top + 440) + "px";
+      // document.querySelector("#calendar").style.left = parentPos.left + "px";
+      window.onresize = () => {
+        document.getElementById(data).style.display = "none";
+        // console.log(window.innerHeight, window.innerWidth);
+      };
+      if (window.innerWidth >= 601 && window.innerWidth <= 3000) {
+        document.querySelector("#calendar").style.top =
+          "-" + (parentPos.top + 440) + "px";
+        document.querySelector("#calendar").style.left = parentPos.left + "px";
+        document.getElementById(data).style.display = "block";
+      }
+      if (window.innerWidth <= 600) {
+        console.log(window.innerWidth);
+        document.querySelector("#calendar").style.top = "-" + 440 * 2 + "px";
+        document.querySelector("#calendar").style.left = 100 + "px";
+        document.getElementById(data).style.display = "block";
+      }
+      document.getElementById(data).style.display = "block";
+    }
   } else {
-    document.getElementById(data).style.display = "none";
-    document.getElementById(data + "-mobile").style.display = "none";
-    document.getElementById("dropdown-years").style.display = "none";
-    document.getElementById("dropdown-years-mobile").style.display = "none";
-    document.getElementById("dropdown-month").style.display = "none";
-    document.getElementById("dropdown-month-mobile").style.display = "none";
+    if (
+      document.getElementById(data).style.display !== "block" &&
+      document.getElementById(data + "-mobile").style.display !== "block"
+    ) {
+      document.getElementById(data).style.display = "block";
+      document.getElementById(data + "-mobile").style.display = "block";
+    } else {
+      document.getElementById(data).style.display = "none";
+      document.getElementById(data + "-mobile").style.display = "none";
+      document.getElementById("dropdown-years").style.display = "none";
+      // document.getElementById("dropdown-years-mobile").style.display = "none";
+      document.getElementById("dropdown-month").style.display = "none";
+      // document.getElementById("dropdown-month-mobile").style.display = "none";
+    }
   }
 }
 
@@ -634,3 +776,188 @@ function showFilter() {
     document.getElementById("filter-container").style.display = "none";
   }
 }
+
+var Calendar = function (t) {
+  (this.divId = t.RenderID ? t.RenderID : '[data-render="calendara"]'),
+    (this.DaysOfWeek = t.DaysOfWeek
+      ? t.DaysOfWeek
+      : ["T2", "T3", "T4", "T5", "T6", "T7", "CN"]),
+    (this.Months = t.Months
+      ? t.Months
+      : [
+          "Tháng 1",
+          "Tháng 2",
+          "Tháng 3",
+          "Tháng 4",
+          "Tháng 5",
+          "Tháng 6",
+          "Tháng 7",
+          "Tháng 8",
+          "Tháng 9",
+          "Tháng 10",
+          "Tháng 11",
+          "Tháng 12",
+        ]);
+  var e = new Date();
+  (this.CurrentMonth = e.getMonth()), (this.CurrentYear = e.getFullYear());
+  var r = t.Format;
+  this.f = "string" == typeof r ? r.charAt(0).toUpperCase() : "M";
+};
+(Calendar.prototype.nextMonth = function () {
+  11 == this.CurrentMonth
+    ? ((this.CurrentMonth = 0), (this.CurrentYear = this.CurrentYear + 1))
+    : (this.CurrentMonth = this.CurrentMonth + 1),
+    (this.divId = '[data-active="false"] .render'),
+    this.showCurrent();
+}),
+  (Calendar.prototype.prevMonth = function () {
+    0 == this.CurrentMonth
+      ? ((this.CurrentMonth = 11), (this.CurrentYear = this.CurrentYear - 1))
+      : (this.CurrentMonth = this.CurrentMonth - 1),
+      (this.divId = '[data-active="false"] .render'),
+      this.showCurrent();
+  }),
+  (Calendar.prototype.previousYear = function () {
+    (this.CurrentYear = this.CurrentYear - 1), this.showCurrent();
+  }),
+  (Calendar.prototype.nextYear = function () {
+    (this.CurrentYear = this.CurrentYear + 1), this.showCurrent();
+  }),
+  (Calendar.prototype.showCurrent = function () {
+    this.Calendar(this.CurrentYear, this.CurrentMonth);
+  }),
+  (Calendar.prototype.checkActive = function () {
+    1 ==
+    document.querySelector(".months").getAttribute("class").includes("active")
+      ? document.querySelector(".months").setAttribute("class", "months")
+      : document
+          .querySelector(".months")
+          .setAttribute("class", "months active"),
+      "true" == document.querySelector(".month-a").getAttribute("data-active")
+        ? (document.querySelector(".month-a").setAttribute("data-active", !1),
+          document.querySelector(".month-b").setAttribute("data-active", !0))
+        : (document.querySelector(".month-a").setAttribute("data-active", !0),
+          document.querySelector(".month-b").setAttribute("data-active", !1)),
+      setTimeout(function () {
+        document
+          .querySelector(".calendara .header")
+          .setAttribute("class", "header active");
+      }, 200),
+      document
+        .querySelector("body")
+        .setAttribute(
+          "data-theme",
+          this.Months[
+            document
+              .querySelector('[data-active="true"] .render')
+              .getAttribute("data-month")
+          ].toLowerCase()
+        );
+  }),
+  (Calendar.prototype.Calendar = function (t, e) {
+    "number" == typeof t && (this.CurrentYear = t),
+      "number" == typeof t && (this.CurrentMonth = e);
+    var r = new Date().getDate(),
+      n = new Date().getMonth(),
+      a = new Date().getFullYear(),
+      o = new Date(t, e, 0).getDay(),
+      i = new Date(t, e + 1, 0).getDate(),
+      u =
+        0 == e ? new Date(t - 1, 11, 0).getDate() : new Date(t, e, 0).getDate(),
+      s =
+        "<span>" +
+        "<span id='month' class='c-pointer' onclick=handleClickShowMonths('desktop')>" +
+        this.Months[e] +
+        `<img
+      src="../../Assets/images/arrow-down.png"
+      class="ml-12 img-8px"
+    />` +
+        "</span>" +
+        "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+        "<span id='year' class='c-pointer' onclick=handleClickShowYears('desktop')>" +
+        t +
+        `<img
+        src="../../Assets/images/arrow-down.png"
+        class="ml-12 img-8px"
+      />` +
+        "<span>" +
+        "</span>",
+      d = '<div class="table">';
+    d += '<div class="row head">';
+    for (var c = 0; c < 7; c++)
+      d += '<div class="cell">' + this.DaysOfWeek[c] + "</div>";
+    d += "</div>";
+    for (
+      var h, l = (dm = "M" == this.f ? 1 : 0 == o ? -5 : 2), v = ((c = 0), 0);
+      v < 6;
+      v++
+    ) {
+      d += '<div class="row">';
+      for (var m = 0; m < 7; m++) {
+        if ((h = c + dm - o) < 1)
+          d += '<div class="cell disable">' + (u - o + l++) + "</div>";
+        else if (h > i) d += '<div class="cell disable">' + l++ + "</div>";
+        else {
+          (d +=
+            '<div class="cell' +
+            (r == h && this.CurrentMonth == n && this.CurrentYear == a
+              ? " active"
+              : "") +
+            `"><span class="cell-value" onclick="onClickDate(${h})">` +
+            h +
+            "</span></div>"),
+            (l = 1);
+        }
+        c % 7 == 6 && h >= i && (v = 10), c++;
+      }
+      d += "</div>";
+    }
+    (d += "</div>"),
+      (document.querySelector('[data-render="month-year"]').innerHTML = s),
+      (document.querySelector(this.divId).innerHTML = d),
+      document
+        .querySelector(this.divId)
+        .setAttribute("data-date", this.Months[e] + " - " + t),
+      document.querySelector(this.divId).setAttribute("data-month", e);
+  }),
+  (window.onload = function () {
+    var t = new Calendar({
+      RenderID: ".render-a",
+      Format: "M",
+    });
+    t.showCurrent(), t.checkActive();
+    var e = document.querySelectorAll(".header [data-action]");
+    for (i = 0; i < e.length; i++)
+      e[i].onclick = function () {
+        if (
+          (document
+            .querySelector(".calendara .header")
+            .setAttribute("class", "header"),
+          "true" ==
+            document.querySelector(".months").getAttribute("data-loading"))
+        )
+          return (
+            document
+              .querySelector(".calendara .header")
+              .setAttribute("class", "header active"),
+            !1
+          );
+        var e;
+        document.querySelector(".months").setAttribute("data-loading", "true"),
+          this.getAttribute("data-action").includes("prev")
+            ? (t.prevMonth(), (e = "left"))
+            : (t.nextMonth(), (e = "right")),
+          t.checkActive(),
+          document.querySelector(".months").setAttribute("data-flow", e),
+          document
+            .querySelector('.month[data-active="true"]')
+            .addEventListener("webkitTransitionEnd", function () {
+              document.querySelector(".months").removeAttribute("data-loading");
+            }),
+          document
+            .querySelector('.month[data-active="true"]')
+            .addEventListener("transitionend", function () {
+              document.querySelector(".months").removeAttribute("data-loading");
+            });
+      };
+  });

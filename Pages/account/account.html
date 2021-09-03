@@ -257,10 +257,10 @@
               <div class="right-container-w-post" id="right-container-w-post">
                 <div class="posts-container" id="manage-post">
                   <p class="title2">Thông tin về các bài viết của bạn</p>
-
                   <div class="filter-container">
                     <div class="calendar-container">
                       <button
+                        id="calendar-value"
                         class="dropdown-toggle select-box"
                         type="button"
                         data-toggle="dropdown"
@@ -272,60 +272,6 @@
                           class="margin-image"
                         />
                       </button>
-
-                      <div id="calendar" class="dropdown-calendar">
-                        <div class="calendar">
-                          <div class="month-year">
-                            <img
-                              src="../../Assets/images/chevron-left.png"
-                              class="prev"
-                            />
-
-                            <div
-                              class="flex-row align-items-center c-pointer"
-                              onclick="handleClickShowMonths('desktop')"
-                            >
-                              <div class="month" id="month"></div>
-                              <img
-                                src="../../Assets/images/arrow-down.png"
-                                class="ml-20 img-8px"
-                              />
-                            </div>
-                            <div
-                              id="dropdown-month"
-                              class="dropdown-month"
-                            ></div>
-                            <div
-                              class="flex-row align-items-center"
-                              onclick="handleClickShowYears('desktop')"
-                            >
-                              <div class="year" id="year"></div>
-                              <img
-                                src="../../Assets/images/arrow-down.png"
-                                class="ml-20 img-8px"
-                              />
-                            </div>
-                            <div
-                              id="dropdown-years"
-                              class="dropdown-years"
-                            ></div>
-                            <img
-                              src="../../Assets/images/chevron-right.png"
-                              class="next"
-                            />
-                          </div>
-                          <div class="weekdays">
-                            <div>T2</div>
-                            <div>T3</div>
-                            <div>T4</div>
-                            <div>T5</div>
-                            <div>T6</div>
-                            <div>T7</div>
-                            <div>CN</div>
-                          </div>
-                          <div class="days"></div>
-                        </div>
-                      </div>
                     </div>
 
                     <div class="status-container">
@@ -712,12 +658,59 @@
                         <img src="../../Assets/images/chevron-down.png" />
                       </button>
 
-                      <div id="calendar-mobile" class="dropdown-calendar">
+                      <!-- <div class="pos-absolute">
+                        <div id="calendar-mobile" class="calendara">
+                          <div class="header">
+                            <a
+                              data-action="prev-month"
+                              href="javascript:void(0)"
+                              title="Previous Month"
+                            >
+                              <img
+                                src="../../Assets/images/chevron-left.png"
+                                class="prev"
+                                id="prev-mobile"
+                              />
+                            </a>
+                            <div class="text" data-render="month-year"></div>
+                            <div
+                              id="dropdown-month-mobile"
+                              class="dropdown-month"
+                            ></div>
+                            <div
+                              id="dropdown-years-mobile"
+                              class="dropdown-years"
+                            ></div>
+                            <a
+                              data-action="next-month"
+                              href="javascript:void(0)"
+                              title="Next Month"
+                            >
+                              <img
+                                src="../../Assets/images/chevron-right.png"
+                                class="next"
+                                id="next-mobile"
+                              />
+                            </a>
+                          </div>
+                          <div class="months" data-flow="left">
+                            <div class="month month-a">
+                              <div class="render render-a"></div>
+                            </div>
+                            <div class="month month-b">
+                              <div class="render render-b"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div> -->
+                      <!-- <div id="calendar-mobile" class="dropdown-calendar">
                         <div class="calendar">
                           <div class="month-year">
                             <img
                               src="../../Assets/images/chevron-left.png"
                               class="prev"
+                              id="prev-mobile"
+                              onclick="onClickPrev()"
                             />
 
                             <div
@@ -751,6 +744,8 @@
                             <img
                               src="../../Assets/images/chevron-right.png"
                               class="next"
+                              id="next-mobile"
+                              onclick="onClickNext()"
                             />
                           </div>
                           <div class="weekdays">
@@ -764,7 +759,7 @@
                           </div>
                           <div class="days-mobile"></div>
                         </div>
-                      </div>
+                      </div> -->
                     </div>
 
                     <div class="status-container">
@@ -908,6 +903,45 @@
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pos-absolute">
+          <div id="calendar" class="calendara">
+            <div class="header">
+              <a
+                data-action="prev-month"
+                href="javascript:void(0)"
+                title="Previous Month"
+              >
+                <img
+                  src="../../Assets/images/chevron-left.png"
+                  class="prev"
+                  id="prev"
+                />
+              </a>
+              <div class="text" data-render="month-year"></div>
+              <div id="dropdown-month" class="dropdown-month"></div>
+              <div id="dropdown-years" class="dropdown-years"></div>
+              <a
+                data-action="next-month"
+                href="javascript:void(0)"
+                title="Next Month"
+              >
+                <img
+                  src="../../Assets/images/chevron-right.png"
+                  class="next"
+                  id="next"
+                />
+              </a>
+            </div>
+            <div class="months" data-flow="left">
+              <div class="month month-a">
+                <div class="render render-a"></div>
+              </div>
+              <div class="month month-b">
+                <div class="render render-b"></div>
               </div>
             </div>
           </div>
