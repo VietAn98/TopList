@@ -3487,6 +3487,15 @@ aboutUs
   line-height: 28px;
   /* transition: color, background 0.4s ease-in-out 0s; */
 }
+.table .row .cell.curent span {
+  border: 1px solid #6cc0ae;
+  border-radius: 100px;
+}
+.table .row .cell.curent span:hover {
+  color: #fff;
+  background-color: #6cc0ae;
+  border-radius: 100px;
+}
 .table .row .cell.active span,
 .table .row .cell.active span:hover {
   color: #fff;

@@ -844,7 +844,7 @@ var Calendar = function (t) {
           (d +=
             '<div class="cell' +
             (r == h && this.CurrentMonth == n && this.CurrentYear == a
-              ? " active"
+              ? " curent"
               : "") +
             `"><span class="cell-value" onclick="onClickDate(${h})">` +
             h +
