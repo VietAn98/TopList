@@ -300,20 +300,6 @@ const renderCalendar = () => {
     }
     document.querySelector("#dropdown-years").innerHTML = eachYear;
   }
-  if (document.querySelector("#year-mobile")) {
-    document.querySelector("#year-mobile").innerHTML = new Date().getFullYear();
-    for (var i = 0; i < years.length; i++) {
-      if (currentYear === years[i]) {
-        eachYear += `<div class="year-item current-year" id=mobile-year-${
-          i + 1
-        } onclick={onClickMonth('year',${i})}>${years[i]}</div>`;
-      } else
-        eachYear += `<div class="year-item" id=mobile-year-${
-          i + 1
-        } onclick={onClickYear('mobile-year',${i})}>${years[i]}</div>`;
-    }
-    document.querySelector("#dropdown-years-mobile").innerHTML = eachYear;
-  }
 
   let days = "";
 
@@ -352,14 +338,8 @@ function onClickMonth(id, i) {
   if (document.getElementById(`${id}-${i + 1}`)) {
     document.getElementById(`${id}-${i + 1}`).classList.add("current-month");
     document.getElementById("dropdown-month").style.display = "none";
-    document.getElementById("dropdown-month-mobile").style.display = "none";
+    // document.getElementById("dropdown-month-mobile").style.display = "none";
     document.querySelector("#month").innerHTML =
-      months[i] +
-      `<img
-    src="../../Assets/images/arrow-down.png"
-    class="ml-12 img-8px"
-  />`;
-    document.querySelector("#month-mobile").innerHTML =
       months[i] +
       `<img
     src="../../Assets/images/arrow-down.png"
@@ -385,19 +365,13 @@ function onClickYear(id, i) {
     // date.setFullYear(years[i]);
     document.getElementById(`${id}-${i + 1}`).classList.add("current-year");
     document.getElementById("dropdown-years").style.display = "none";
-    document.getElementById("dropdown-years-mobile").style.display = "none";
     document.querySelector("#year").innerHTML =
       years[i] +
       `<img
     src="../../Assets/images/arrow-down.png"
     class="ml-12 img-8px"
   />`;
-    document.querySelector("#year-mobile").innerHTML =
-      years[i] +
-      `<img
-    src="../../Assets/images/arrow-down.png"
-    class="ml-12 img-8px"
-  />`;
+
     var t = new Calendar({
       RenderID: ".render-a",
       Format: "M",
@@ -478,21 +452,6 @@ function handleClickShowMonths(type) {
     } else {
       document.getElementById("dropdown-month").style.display = "none";
     }
-  } else {
-    if (
-      document.getElementById(
-        ("dropdown-month-mobile" &&
-          document.getElementById("dropdown-month-mobile").style.display ===
-            "none") ||
-          document.getElementById("dropdown-month-mobile").style.display === ""
-      )
-    ) {
-      document.getElementById("dropdown-month-mobile").style.display = "flex";
-      document.getElementById("dropdown-month-mobile").style.flexDirection =
-        "column";
-    } else {
-      document.getElementById("dropdown-month-mobile").style.display = "none";
-    }
   }
 }
 function handleClickShowYears(type) {
@@ -529,38 +488,15 @@ function handleClickShowYears(type) {
     } else {
       document.getElementById("dropdown-years").style.display = "none";
     }
-  } else {
-    if (
-      document.getElementById("dropdown-years-mobile") &&
-      document.getElementById("dropdown-years-mobile").style.display ===
-        "none" &&
-      document.getElementById("dropdown-years-mobile").style.display === ""
-    ) {
-      document.getElementById("dropdown-years-mobile").style.display = "flex";
-      document.getElementById("dropdown-years-mobile").style.flexDirection =
-        "column";
-    } else {
-      document.getElementById("dropdown-years-mobile").style.display = "none";
-    }
   }
 }
 
 function onClickPrev() {
   date.setMonth(date.getMonth() - 1);
-  // // console.log(date.setMonth());
-  // if (date.getMonth() === 0) {
-  //   date.setFullYear(date.getFullYear() - 1);
-  // }
-  console.log(date.setFullYear(date.getFullYear() - 1));
-  // date.setFullYear(date.setFullYear() - 1);
-  // renderCalendar();
 }
 
 function onClickNext() {
   date.setMonth(date.getMonth() + 1);
-  console.log(date.getMonth() + 1);
-  // date.setFullYear(date.setFullYear() + 1);
-  renderCalendar();
 }
 
 renderCalendar();
@@ -616,14 +552,10 @@ function showSelect(data) {
   var parentPos = document
     .querySelector(".calendar-container")
     .getBoundingClientRect();
-  console.log(parentPos);
   if (data === "calendar") {
     if (document.getElementById(data).style.display === "block") {
       document.getElementById(data).style.display = "none";
     } else {
-      // document.querySelector("#calendar").style.top =
-      //   "-" + (parentPos.top + 440) + "px";
-      // document.querySelector("#calendar").style.left = parentPos.left + "px";
       window.onresize = () => {
         document.getElementById(data).style.display = "none";
         // console.log(window.innerHeight, window.innerWidth);
@@ -635,7 +567,6 @@ function showSelect(data) {
         document.getElementById(data).style.display = "block";
       }
       if (window.innerWidth <= 600) {
-        console.log(window.innerWidth);
         document.querySelector("#calendar").style.top = "-" + 440 * 2 + "px";
         document.querySelector("#calendar").style.left = 100 + "px";
         document.getElementById(data).style.display = "block";
