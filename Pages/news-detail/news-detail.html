@@ -191,28 +191,71 @@
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>
+      const contentNumberChild =
+        document.getElementById("content").childElementCount;
+      let currentScrollLocation = 0;
+      let maxScrollLocation = 426 * (contentNumberChild - 1);
+
       $(".horizon-prev").click(function () {
         event.preventDefault();
-        console.log("prev");
+        const scrollValue = getPrevScrollLocation();
+        let speed = 400;
+        if (scrollValue === 0) {
+          speed = 0;
+        }
+
         $("#content").animate(
           {
-            scrollLeft: "-=426px",
+            scrollLeft: `-=${scrollValue}px`,
           },
-          "slow"
+          speed
         );
       });
 
       $(".horizon-next").click(function () {
         event.preventDefault();
+        const scrollValue = getNextScrollLocation();
+        let speed = 400;
+        if (scrollValue === 0) {
+          speed = 0;
+        }
         console.log("next");
 
         $("#content").animate(
           {
-            scrollLeft: "+=426px",
+            scrollLeft: `+=${scrollValue}px`,
           },
-          "slow"
+          speed
         );
       });
+
+      function getPrevScrollLocation() {
+        if (currentScrollLocation === 0) {
+          currentScrollLocation = 0;
+          return 0;
+        }
+        if (currentScrollLocation - 426 <= 0) {
+          let result = currentScrollLocation;
+          currentScrollLocation = 0;
+          return result;
+        }
+        currentScrollLocation -= 426;
+        return 426;
+      }
+
+      function getNextScrollLocation() {
+        if (currentScrollLocation === maxScrollLocation) {
+          currentScrollLocation = maxScrollLocation;
+          return maxScrollLocation;
+        }
+        if (currentScrollLocation + 426 >= maxScrollLocation) {
+          let result = currentScrollLocation;
+          currentScrollLocation = maxScrollLocation;
+          return maxScrollLocation - result;
+        }
+        currentScrollLocation += 426;
+        return 426;
+      }
     </script>
   </body>
 </html>
