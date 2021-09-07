@@ -26,7 +26,7 @@
           <button class="primary-btn ml-3per mr-0">Bắt đầu ngay</button>
         </div>
         <div class="news-detail-container">
-          <div class="news-detail-content">
+          <div id="newsDetailContainer" class="news-detail-content">
             <div class="news-detail">
               <div class="news-detail-title">
                 Tư vấn du học Mỹ từ các học sinh thực tế sống tại Mỹ
@@ -71,11 +71,26 @@
               </div>
               <div class="news-detail-student-slider-container">
                 <div id="content" class="news-detail-student-slider flex-row">
-                  <div include-html="./card-student.html"></div>
-                  <div include-html="./card-student.html"></div>
-                  <div include-html="./card-student.html"></div>
-                  <div include-html="./card-student.html"></div>
-                  <div include-html="./card-student.html"></div>
+                  <div
+                    class="content-student-item"
+                    include-html="./card-student.html"
+                  ></div>
+                  <div
+                    class="content-student-item"
+                    include-html="./card-student.html"
+                  ></div>
+                  <div
+                    class="content-student-item"
+                    include-html="./card-student.html"
+                  ></div>
+                  <div
+                    class="content-student-item"
+                    include-html="./card-student.html"
+                  ></div>
+                  <div
+                    class="content-student-item"
+                    include-html="./card-student.html"
+                  ></div>
                 </div>
                 <img class="horizon-prev" src="../../Assets/images/prev.png" />
                 <img class="horizon-next" src="../../Assets/images/next.png" />
@@ -192,10 +207,17 @@
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>
+      // Get width of student-item
+      let newsDetailItem = document.querySelector("#newsDetailContainer");
+      let styles = window.getComputedStyle(newsDetailItem);
+      let stylesWidth = parseInt(styles.width.replace("px", ""));
+      let studentWidth = stylesWidth <= 400 ? stylesWidth : 426;
+
       const contentNumberChild =
         document.getElementById("content").childElementCount;
       let currentScrollLocation = 0;
-      let maxScrollLocation = 426 * (contentNumberChild - 1);
+      let currentSession = 0;
+      let maxScrollLocation = studentWidth * (contentNumberChild - 1);
 
       $(".horizon-prev").click(function () {
         event.preventDefault();
@@ -228,13 +250,13 @@
           currentScrollLocation = 0;
           return 0;
         }
-        if (currentScrollLocation - 426 <= 0) {
+        if (currentScrollLocation - studentWidth <= 0) {
           let result = currentScrollLocation;
           currentScrollLocation = 0;
           return result;
         }
-        currentScrollLocation -= 426;
-        return 426;
+        currentScrollLocation -= studentWidth;
+        return studentWidth;
       }
 
       function getNextScrollLocation() {
@@ -242,14 +264,23 @@
           currentScrollLocation = maxScrollLocation;
           return 0;
         }
-        if (currentScrollLocation + 426 >= maxScrollLocation) {
+        if (currentScrollLocation + studentWidth >= maxScrollLocation) {
           let result = currentScrollLocation;
           currentScrollLocation = maxScrollLocation;
           return maxScrollLocation - result;
         }
-        currentScrollLocation += 426;
-        return 426;
+        currentScrollLocation += studentWidth;
+        return studentWidth;
       }
+
+      function winResize(e) {
+        styles = window.getComputedStyle(newsDetailItem);
+        stylesWidth = parseInt(styles.width.replace("px", ""));
+        studentWidth = stylesWidth <= 400 ? stylesWidth : 426;
+        maxScrollLocation = studentWidth * (contentNumberChild - 1);
+      }
+
+      window.addEventListener("resize", winResize);
     </script>
   </body>
 </html>

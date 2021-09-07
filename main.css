@@ -2100,14 +2100,23 @@ sub-category, super-categor
   cursor: pointer;
 }
 
+.content-student-item {
+  width: 396px;
+  margin-right: 30px;
+}
+@media only screen and (max-width: 440px) {
+  .content-student-item {
+    width: -webkit-fill-available;
+    margin-right: 0;
+  }
+}
+
 .student-item {
   background-color: white;
   padding: 10px 25px;
   border-radius: 10px 80px 10px 10px;
-  width: 346px;
   line-height: 16px;
   font-size: 12px;
-  margin-right: 30px;
 }
 
 .student-avatarSummary {
