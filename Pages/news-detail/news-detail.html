@@ -75,6 +75,7 @@
                   <div include-html="./card-student.html"></div>
                   <div include-html="./card-student.html"></div>
                   <div include-html="./card-student.html"></div>
+                  <div include-html="./card-student.html"></div>
                 </div>
                 <img class="horizon-prev" src="../../Assets/images/prev.png" />
                 <img class="horizon-next" src="../../Assets/images/next.png" />
@@ -199,34 +200,27 @@
       $(".horizon-prev").click(function () {
         event.preventDefault();
         const scrollValue = getPrevScrollLocation();
-        let speed = 400;
-        if (scrollValue === 0) {
-          speed = 0;
+        if (scrollValue !== 0) {
+          $("#content").animate(
+            {
+              scrollLeft: `-=${scrollValue}px`,
+            },
+            400
+          );
         }
-
-        $("#content").animate(
-          {
-            scrollLeft: `-=${scrollValue}px`,
-          },
-          speed
-        );
       });
 
       $(".horizon-next").click(function () {
         event.preventDefault();
         const scrollValue = getNextScrollLocation();
-        let speed = 400;
-        if (scrollValue === 0) {
-          speed = 0;
+        if (scrollValue !== 0) {
+          $("#content").animate(
+            {
+              scrollLeft: `+=${scrollValue}px`,
+            },
+            400
+          );
         }
-        console.log("next");
-
-        $("#content").animate(
-          {
-            scrollLeft: `+=${scrollValue}px`,
-          },
-          speed
-        );
       });
 
       function getPrevScrollLocation() {
@@ -246,7 +240,7 @@
       function getNextScrollLocation() {
         if (currentScrollLocation === maxScrollLocation) {
           currentScrollLocation = maxScrollLocation;
-          return maxScrollLocation;
+          return 0;
         }
         if (currentScrollLocation + 426 >= maxScrollLocation) {
           let result = currentScrollLocation;
